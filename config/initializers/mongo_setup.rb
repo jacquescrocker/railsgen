@@ -1,0 +1,1 @@
+MongoMapper.database = "whitelabeljobs_#{Rails.env}"
