@@ -1,2 +1,5 @@
-class PagesController < ApplicationController
+class PagesController < ApplicationController  
+  def landing
+
+  end
 end

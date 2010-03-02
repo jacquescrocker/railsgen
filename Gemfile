@@ -6,13 +6,15 @@ gem "ruby-debug"
 gem "mongrel"
 
 gem "haml-edge", :require => "haml"
-gem "compass", :version => ">= 0.10.0.pre8"
+gem "compass", ">= 0.10.0.pre8"
 
 gem "will_paginate", ">= 3.0.pre"
 gem "mongo", ">= 0.19"
 gem "mongo_ext", ">= 0.19"
 
 gem "mongo_mapper-rails3", :require => "mongo_mapper"
+
+gem "merb_app_config", ">= 1.2"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"

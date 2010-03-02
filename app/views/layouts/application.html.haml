@@ -1,0 +1,14 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE7")
+    %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+
+    %title= AppConfig.site_title
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  
+  %body
+    = yield
