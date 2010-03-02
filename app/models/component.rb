@@ -6,5 +6,4 @@ class Component
   timestamps!
   
   
-  
 end

@@ -3,9 +3,8 @@ class Comment
   
   key :title, String
   key :description, String
-  timestamps!
+  key :posted_at, Time
   
   key :author_id, ObjectId
   belongs_to :author, :class_name => "User"
-  
 end
