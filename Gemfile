@@ -21,6 +21,9 @@ gem "merb_app_config", ">= 1.2"
 gem "compass-960-plugin"
 
 group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
   gem "factory_girl", :require => nil
   gem "rspec-rails", ">= 2.0.0.beta"
 end

@@ -1,1 +1,1 @@
-MongoMapper.database = "whitelabeljobs_#{Rails.env}"
+MongoMapper.database = "railsgen_#{Rails.env}"
