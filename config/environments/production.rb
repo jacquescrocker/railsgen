@@ -24,35 +24,30 @@ RailsGenerate::Application.configure do
   
   # lets do some h4x0ring!
   class Hassle::Compiler
-    def compile
-      Rails.logger.error("STARTING Sass::Plugin.options[:template_location]:")
-      Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
+    def css_location(path)
+      expanded = File.expand_path(path)
+      public_dir = File.join(File.expand_path(Dir.pwd), "public")
 
-      normalize
-      prepare
-
-      Rails.logger.error("ENDING Sass::Plugin.options[:template_location]:")
-      Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
-
-      Sass::Plugin.update_stylesheets
+      File.expand_path(compile_location(expanded.gsub(public_dir, '')))
+    end
+    
+    def normalize
+      template_location = options[:template_location]
+    
+      if template_location.is_a?(Hash)
+        template_location.each_pair do |input, output|
+          template_location[input] = css_location(output)
+        end
+      elsif template_location.is_a?(Array)
+        options[:template_location] = template_location.to_a.map do |input, output|
+          [input, css_location(output)]
+        end
+      else
+        default_location = File.join(options[:css_location], "sass")
+        options[:template_location] = {default_location => css_location(default_location)}
+      end
     end
   end
-  
-  class Hassle
-    def initialize(app)
-      compiler = Hassle::Compiler.new
-      compiler.compile
-      
-      Rails.logger.error("Loading Rack::Static with")
-      Rails.logger.error(":urls => #{compiler.stylesheets.inspect}")
-      Rails.logger.error(":root => #{compiler.compile_location}")
-      
-      @static = Rack::Static.new(app,
-                                 :urls => compiler.stylesheets,
-                                 :root => compiler.compile_location)
-    end
-  end
-      
   
   config.middleware.use Hassle
 
