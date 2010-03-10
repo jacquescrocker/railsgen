@@ -63,6 +63,7 @@ specs:
     version: 1.0.4
 - activeresource: 
     version: 3.0.0.beta1
+    source: 0
 - rspec-core: 
     version: 2.0.0.beta.3
 - ruby-debug: 
@@ -79,8 +80,10 @@ specs:
     version: 1.1.6
 - activerecord: 
     version: 3.0.0.beta1
+    source: 0
 - rails: 
     version: 3.0.0.beta1
+    source: 0
 - mongo_mapper: 
     version: 0.7.1
 - diff-lcs: 
@@ -97,6 +100,7 @@ specs:
     version: 0.13.4
 - railties: 
     version: 3.0.0.beta1
+    source: 0
 - treetop: 
     version: 1.4.4
 - mime-types: 
@@ -119,6 +123,7 @@ specs:
     version: 0.5.0
 - activemodel: 
     version: 3.0.0.beta1
+    source: 0
 - rspec-rails: 
     version: 2.0.0.beta.3
 - rspec-expectations: 
@@ -145,8 +150,10 @@ specs:
     version: 0.5.3
 - actionmailer: 
     version: 3.0.0.beta1
+    source: 0
 - actionpack: 
     version: 3.0.0.beta1
+    source: 0
 - cucumber: 
     version: 0.6.3
 - json_pure: 
@@ -161,6 +168,7 @@ specs:
     version: 1.0.0
 - activesupport: 
     version: 3.0.0.beta1
+    source: 0
 - rspec-mocks: 
     version: 2.0.0.beta.3
 - builder: 
@@ -171,7 +179,13 @@ specs:
     version: 0.3.5
 - ruby-debug-base: 
     version: 0.10.3
-hash: f7b0dedd636cd0ca09fd57639f55bc52a1071aa2
+hash: a1448829fb0750b24caecbd7664870e9937b7021
 sources: 
+- Git: 
+    name: rails
+    uri: git://github.com/rails/rails.git
+    version: 3.0.0.beta1
+    git: git://github.com/rails/rails.git
+    ref: 181c414baa877d748671d03fb09499c10f81ec02
 - Rubygems: 
     uri: http://gemcutter.org
