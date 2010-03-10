@@ -1,7 +1,7 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 
-gem "rails", "3.0.0.beta1"
+gem "rails", "3.0.0.beta1", :git => "git://github.com/rails/rails.git"
 gem "ruby-debug"
 gem "mongrel"
 
