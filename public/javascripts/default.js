@@ -1,7 +1,5 @@
 var resizeWindow = function() {  
-  if (jQuery('#body').height() < jQuery(window).height()) {
-    jQuery('#body').height(jQuery(window).height());
-  }
+  jQuery('#body').height(Math.max(jQuery(window).height(), jQuery('#content_container').outerHeight()));
 }
 
 jQuery(document).ready(resizeWindow);
