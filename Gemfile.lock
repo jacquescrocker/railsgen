@@ -4,6 +4,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0.19"
+  hassle: 
+    group: 
+    - :default
+    version: ">= 0"
   compass: 
     group: 
     - :default
@@ -69,50 +73,44 @@ specs:
     version: 1.0.0
 - builder: 
     version: 2.1.2
-- i18n: 
-    version: 0.3.5
 - json_pure: 
     version: 1.2.2
+- i18n: 
+    version: 0.3.5
 - bundler: 
     version: 0.9.5
 - linecache: 
     version: "0.43"
 - ruby-debug-base: 
     version: 0.10.3
-- will_paginate: 
-    version: 3.0.pre
-- arel: 
-    version: 0.2.1
 - factory_girl: 
     version: 1.2.3
 - cucumber-rails: 
     version: 0.3.0
-- activemodel: 
-    version: 3.0.0.beta
+- will_paginate: 
+    version: 3.0.pre
+- arel: 
+    version: 0.2.1
 - database_cleaner: 
     version: 0.5.0
+- activemodel: 
+    version: 3.0.0.beta
 - rack-mount: 
     version: 0.4.7
-- jnunemaker-validatable: 
-    version: 1.8.3
-- abstract: 
-    version: 1.0.0
-- erubis: 
-    version: 2.6.5
 - mime-types: 
     version: "1.16"
 - mail: 
     version: 2.1.3
+- abstract: 
+    version: 1.0.0
+- erubis: 
+    version: 2.6.5
+- jnunemaker-validatable: 
+    version: 1.8.3
 - thor: 
     version: 0.13.4
 - diff-lcs: 
     version: 1.1.2
-- polyglot: 
-    version: 0.3.0
-- treetop: 
-    version: 1.4.4
-- selenium-webdriver: 
-    version: 0.0.17
 - memcache-client: 
     version: 1.7.8
 - rack: 
@@ -123,8 +121,6 @@ specs:
     version: 3.0.0.beta
 - webrat: 
     version: 0.7.0
-- haml: 
-    version: 2.2.20
 - mongo_ext: 
     version: 0.19.1
 - rake: 
@@ -133,16 +129,30 @@ specs:
     version: 0.6.3
 - railties: 
     version: 3.0.0.beta
-- columnize: 
-    version: 0.3.1
-- activerecord: 
-    version: 3.0.0.beta
+- haml: 
+    version: 2.2.20
+- selenium-webdriver: 
+    version: 0.0.17
+- polyglot: 
+    version: 0.3.0
+- treetop: 
+    version: 1.4.4
 - text-format: 
     version: 1.0.0
 - actionmailer: 
     version: 3.0.0.beta
+- activerecord: 
+    version: 3.0.0.beta
+- columnize: 
+    version: 0.3.1
 - term-ansicolor: 
     version: 1.0.4
+- tzinfo: 
+    version: 0.3.17
+- activesupport: 
+    version: 3.0.0.beta
+- hassle: 
+    version: 0.0.1
 - ruby-debug: 
     version: 0.10.3
 - compass: 
@@ -169,15 +179,11 @@ specs:
     version: 0.3.5
 - rspec-rails: 
     version: 2.0.0.beta.3
-- tzinfo: 
-    version: 0.3.17
-- activesupport: 
-    version: 3.0.0.beta
 - mongo: 
     version: 0.19.1
 - mongo_mapper: 
     version: 0.7.1
-hash: f6d2fb6b7f8b784bd291255b61990fb65acf547d
+hash: bd9bf344ae879466cf24c093c68666b4af33110f
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

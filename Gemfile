@@ -7,6 +7,7 @@ gem "ruby-debug"
 
 gem "haml"
 gem "compass", ">= 0.10.0.rc1"
+gem "hassle"
 
 gem "will_paginate", ">= 3.0.pre"
 gem "mongo", ">= 0.19"
