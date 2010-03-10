@@ -27,6 +27,7 @@ RailsGenerate::Application.configure do
     def compile
       Rails.logger.error("STARTING Sass::Plugin.options[:template_location]:")
       Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
+
       normalize
       prepare
 
@@ -34,6 +35,21 @@ RailsGenerate::Application.configure do
       Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
 
       Sass::Plugin.update_stylesheets
+    end
+  end
+  
+  class Hassle
+    def initialize(app)
+      compiler = Hassle::Compiler.new
+      compiler.compile
+      
+      Rails.logger.error("Loading Rack::Static with")
+      Rails.logger.error(":urls => #{compiler.stylesheets.inspect}")
+      Rails.logger.error(":root => #{compiler.compile_location}")
+      
+      @static = Rack::Static.new(app,
+                                 :urls => compiler.stylesheets,
+                                 :root => compiler.compile_location)
     end
   end
       
