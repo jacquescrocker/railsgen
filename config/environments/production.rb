@@ -26,7 +26,7 @@ RailsGenerate::Application.configure do
   class Hassle::Compiler
     def compile
       Rails.logger.error("Sass::Plugin.options[:template_location]:")
-      Rails.logger.error(Sass::Plugin.options[:template_location])
+      Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
       normalize
       prepare
       Sass::Plugin.update_stylesheets
