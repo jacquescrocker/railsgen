@@ -22,6 +22,18 @@ RailsGenerate::Application.configure do
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
   
+  # lets do some h4x0ring!
+  class Hassle::Compiler
+    def compile
+      Rails.logger.error("Sass::Plugin.options[:template_location]:")
+      Rails.logger.error(Sass::Plugin.options[:template_location])
+      normalize
+      prepare
+      Sass::Plugin.update_stylesheets
+    end
+  end
+      
+  
   config.middleware.use Hassle
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
