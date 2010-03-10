@@ -1,24 +1,20 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 
-gem "bundler", "0.9.7"
-
-gem "rails", "3.0.0.beta"
+gem "rails", "3.0.0.beta1"
 gem "ruby-debug"
 gem "mongrel"
 
 gem "haml-edge", :require => "haml"
-gem "compass", ">= 0.10.0.pre8"
+# gem "compass", ">= 0.10.0.rc1"
 
 gem "will_paginate", ">= 3.0.pre"
 gem "mongo", ">= 0.19"
 gem "mongo_ext", ">= 0.19"
 
-gem "mongo_mapper-rails3", :require => "mongo_mapper"
+gem "mongo_mapper", ">= 0.7.1"
 
-gem "merb_app_config", ">= 1.2"
-
-gem "compass-960-plugin"
+# gem "compass-960-plugin"
 
 group :test do
   gem 'capybara'
