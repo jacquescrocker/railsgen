@@ -1,10 +1,11 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 
-gem "rails", "3.0.0.beta1", :git => "git://github.com/rails/rails.git"
+gem "bundler", "0.9.5"
+gem "rails", "3.0.0.beta"
 gem "ruby-debug"
 
-gem "haml-edge", :require => "haml"
+gem "haml"
 gem "compass", ">= 0.10.0.rc1"
 
 gem "will_paginate", ">= 3.0.pre"

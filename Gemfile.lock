@@ -19,11 +19,15 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta1
+    version: = 3.0.0.beta
   mongo_ext: 
     group: 
     - :default
     version: ">= 0.19"
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
   rspec-rails: 
     group: 
     - :test
@@ -32,6 +36,12 @@ dependencies:
     group: 
     - :test
     version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+    require: []
+
   cucumber-rails: 
     group: 
     - :test
@@ -40,158 +50,134 @@ dependencies:
     group: 
     - :default
     version: ">= 3.0.pre"
-  factory_girl: 
+  bundler: 
     group: 
-    - :test
-    version: ">= 0"
-    require: []
-
+    - :default
+    version: = 0.9.5
   compass-960-plugin: 
     group: 
     - :default
     version: ">= 0"
-  haml-edge: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - haml
   capybara: 
     group: 
     - :test
     version: ">= 0"
 specs: 
-- rake: 
-    version: 0.8.7
-- ruby-debug: 
-    version: 0.10.3
-- rspec-core: 
-    version: 2.0.0.beta.3
-- compass: 
-    version: 0.10.0.rc1
-- activeresource: 
-    version: 3.0.0.beta1
-    source: 0
-- term-ansicolor: 
-    version: 1.0.4
-- mongo: 
-    version: 0.19.1
-- tzinfo: 
-    version: 0.3.17
-- mongo_mapper: 
-    version: 0.7.1
-- columnize: 
-    version: 0.3.1
-- rails: 
-    version: 3.0.0.beta1
-    source: 0
-- activerecord: 
-    version: 3.0.0.beta1
-    source: 0
-- text-format: 
-    version: 1.0.0
-- polyglot: 
-    version: 0.3.0
-- memcache-client: 
-    version: 1.7.8
-- haml: 
-    version: 2.2.20
-- selenium-webdriver: 
-    version: 0.0.17
-- diff-lcs: 
-    version: 1.1.2
-- mongo_ext: 
-    version: 0.19.1
-- thor: 
-    version: 0.13.4
-- railties: 
-    version: 3.0.0.beta1
-    source: 0
-- treetop: 
-    version: 1.4.4
-- jnunemaker-validatable: 
-    version: 1.8.3
-- mime-types: 
-    version: "1.16"
-- abstract: 
-    version: 1.0.0
-- rspec: 
-    version: 2.0.0.beta.3
-- rack-mount: 
-    version: 0.6.1
-- rspec-expectations: 
-    version: 2.0.0.beta.3
-- rspec-rails: 
-    version: 2.0.0.beta.3
-- activemodel: 
-    version: 3.0.0.beta1
-    source: 0
-- mail: 
-    version: 2.1.3
-- rack: 
-    version: 1.1.0
-- database_cleaner: 
-    version: 0.5.0
-- factory_girl: 
-    version: 1.2.3
-- webrat: 
-    version: 0.7.0
-- cucumber-rails: 
-    version: 0.3.0
-- arel: 
-    version: 0.2.1
-- erubis: 
-    version: 2.6.5
-- will_paginate: 
-    version: 3.0.pre
-- bundler: 
-    version: 0.9.11
-- culerity: 
-    version: 0.2.9
-- linecache: 
-    version: "0.43"
-- cucumber: 
-    version: 0.6.3
-- compass-960-plugin: 
-    version: 0.9.11
-- rack-test: 
-    version: 0.5.3
-- actionpack: 
-    version: 3.0.0.beta1
-    source: 0
-- actionmailer: 
-    version: 3.0.0.beta1
-    source: 0
-- i18n: 
-    version: 0.3.5
-- json_pure: 
-    version: 1.2.2
-- haml-edge: 
-    version: 2.3.169
-- ffi: 
-    version: 0.6.3
+- nokogiri: 
+    version: 1.4.1
 - text-hyphen: 
     version: 1.0.0
 - builder: 
     version: 2.1.2
-- rspec-mocks: 
-    version: 2.0.0.beta.3
-- activesupport: 
-    version: 3.0.0.beta1
-    source: 0
+- i18n: 
+    version: 0.3.5
+- json_pure: 
+    version: 1.2.2
+- bundler: 
+    version: 0.9.5
+- linecache: 
+    version: "0.43"
 - ruby-debug-base: 
     version: 0.10.3
+- will_paginate: 
+    version: 3.0.pre
+- arel: 
+    version: 0.2.1
+- factory_girl: 
+    version: 1.2.3
+- cucumber-rails: 
+    version: 0.3.0
+- activemodel: 
+    version: 3.0.0.beta
+- database_cleaner: 
+    version: 0.5.0
+- rack-mount: 
+    version: 0.4.7
+- jnunemaker-validatable: 
+    version: 1.8.3
+- abstract: 
+    version: 1.0.0
+- erubis: 
+    version: 2.6.5
+- mime-types: 
+    version: "1.16"
+- mail: 
+    version: 2.1.3
+- thor: 
+    version: 0.13.4
+- diff-lcs: 
+    version: 1.1.2
+- polyglot: 
+    version: 0.3.0
+- treetop: 
+    version: 1.4.4
+- selenium-webdriver: 
+    version: 0.0.17
+- memcache-client: 
+    version: 1.7.8
+- rack: 
+    version: 1.1.0
+- rack-test: 
+    version: 0.5.3
+- actionpack: 
+    version: 3.0.0.beta
+- webrat: 
+    version: 0.7.0
+- haml: 
+    version: 2.2.20
+- mongo_ext: 
+    version: 0.19.1
+- rake: 
+    version: 0.8.7
+- ffi: 
+    version: 0.6.3
+- railties: 
+    version: 3.0.0.beta
+- columnize: 
+    version: 0.3.1
+- activerecord: 
+    version: 3.0.0.beta
+- text-format: 
+    version: 1.0.0
+- actionmailer: 
+    version: 3.0.0.beta
+- term-ansicolor: 
+    version: 1.0.4
+- ruby-debug: 
+    version: 0.10.3
+- compass: 
+    version: 0.10.0.rc1
+- compass-960-plugin: 
+    version: 0.9.11
+- activeresource: 
+    version: 3.0.0.beta
+- rails: 
+    version: 3.0.0.beta
+- rspec-core: 
+    version: 2.0.0.beta.3
+- rspec-expectations: 
+    version: 2.0.0.beta.3
+- rspec-mocks: 
+    version: 2.0.0.beta.3
+- rspec: 
+    version: 2.0.0.beta.3
+- cucumber: 
+    version: 0.6.3
+- culerity: 
+    version: 0.2.9
 - capybara: 
     version: 0.3.5
-- nokogiri: 
-    version: 1.4.1
-hash: e43dc07fb3d3a545f0f4c4002249d1c7139fc924
+- rspec-rails: 
+    version: 2.0.0.beta.3
+- tzinfo: 
+    version: 0.3.17
+- activesupport: 
+    version: 3.0.0.beta
+- mongo: 
+    version: 0.19.1
+- mongo_mapper: 
+    version: 0.7.1
+hash: f6d2fb6b7f8b784bd291255b61990fb65acf547d
 sources: 
-- Git: 
-    name: rails
-    uri: git://github.com/rails/rails.git
-    version: 3.0.0.beta1
-    git: git://github.com/rails/rails.git
-    ref: 181c414baa877d748671d03fb09499c10f81ec02
 - Rubygems: 
     uri: http://gemcutter.org
