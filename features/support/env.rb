@@ -8,6 +8,7 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 
 require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
+require 'test/unit'
 require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
@@ -32,27 +33,3 @@ Capybara.default_selector = :css
 # default production environment. It's not recommended to do this for all
 # of your scenarios, as this makes it hard to discover errors in your application.
 ActionController::Base.allow_rescue = false
-
-# If you set this to true, each scenario will run in a database transaction.
-# You can still turn off transactions on a per-scenario basis, simply tagging 
-# a feature or scenario with the @no-txn tag. If you are using Capybara,
-# tagging with @culerity or @javascript will also turn transactions off.
-#
-# If you set this to false, transactions will be off for all scenarios,
-# regardless of whether you use @no-txn or not.
-#
-# Beware that turning transactions off will leave data in your database 
-# after each scenario, which can lead to hard-to-debug failures in 
-# subsequent scenarios. If you do this, we recommend you create a Before
-# block that will explicitly put your database in a known state.
-Cucumber::Rails::World.use_transactional_fixtures = true
-
-# How to clean your database when transactions are turned off. See
-# http://github.com/bmabey/database_cleaner for more info.
-if defined?(ActiveRecord::Base)
-  begin
-    require 'database_cleaner'
-    DatabaseCleaner.strategy = :truncation
-  rescue LoadError => ignore_if_database_cleaner_not_present
-  end
-end
