@@ -6,6 +6,8 @@ class Stack
   # used for urls http://my-app.railsgen.com
   # or http://railsgen.com/my-app
   key :name, String
+  # TODO: add url validator on name
+  
   timestamps!
   
   

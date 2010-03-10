@@ -5,5 +5,5 @@ class Component
   key :description, String
   timestamps!
   
-  
+  belongs_to :step
 end
