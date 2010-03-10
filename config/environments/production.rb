@@ -25,10 +25,14 @@ RailsGenerate::Application.configure do
   # lets do some h4x0ring!
   class Hassle::Compiler
     def compile
-      Rails.logger.error("Sass::Plugin.options[:template_location]:")
+      Rails.logger.error("STARTING Sass::Plugin.options[:template_location]:")
       Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
       normalize
       prepare
+
+      Rails.logger.error("ENDING Sass::Plugin.options[:template_location]:")
+      Rails.logger.error(Sass::Plugin.options[:template_location].inspect)
+
       Sass::Plugin.update_stylesheets
     end
   end
