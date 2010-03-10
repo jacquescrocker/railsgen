@@ -3,7 +3,6 @@ source 'http://gemcutter.org'
 
 gem "rails", "3.0.0.beta1", :git => "git://github.com/rails/rails.git"
 gem "ruby-debug"
-gem "mongrel"
 
 gem "haml-edge", :require => "haml"
 # gem "compass", ">= 0.10.0.rc1"
@@ -15,6 +14,10 @@ gem "mongo_ext", ">= 0.19"
 gem "mongo_mapper", ">= 0.7.1"
 
 # gem "compass-960-plugin"
+
+group :development do
+  gem "mongrel"
+end
 
 group :test do
   gem 'capybara'
