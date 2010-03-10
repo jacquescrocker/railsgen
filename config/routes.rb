@@ -46,9 +46,12 @@ RailsGenerate::Application.routes.draw do |map|
   #     resources :products
   #   end
 
+  root :to => "pages#comingsoon"
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "pages#landing"
+  
+  # root :to => "pages#landing"
 
   # See how all your routes lay out with "rake routes"
 
