@@ -44,6 +44,8 @@ RailsGenerate::Application.routes.draw do |map|
   #   end
 
   resources :stacks
+
+  match "comingsoon" => "pages#comingsoon"
   
   # put up splash pages
   if Rails.env.production?
