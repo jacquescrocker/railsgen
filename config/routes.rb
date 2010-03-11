@@ -52,7 +52,7 @@ RailsGenerate::Application.routes.draw do |map|
   if Rails.env.production?
     root :to => "pages#comingsoon"
   else
-    root :to => "stacks#index"
+    root :to => "stacks#landing"
   end
 
   # You can have the root of your site routed with "root"

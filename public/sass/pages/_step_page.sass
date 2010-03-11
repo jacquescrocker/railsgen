@@ -1,0 +1,229 @@
+.step_page
+  h1
+    text-align: left
+    margin: 8px 0
+    float: left
+    font-size: 30px
+  h2
+    margin-right: 8px
+  
+  a.comments
+    float: right
+    font-size: 11px
+    font-weight: bold
+    margin-left: 10px
+    margin-right: 3px
+    margin-top: 3px
+    text-decoration: none
+
+  p.tagline
+    padding: 0
+    margin-top: 3px
+    font-size: 11px
+    overflow: hidden
+    white-space: nowrap
+  // 
+  .app_item
+    float: left
+    margin: 0
+    width: 618px
+
+    li
+      margin: 0 0 30px 0
+      padding: 10px
+      clear: both
+      display: block
+
+      &:last-child
+        margin: 0
+
+    h2
+      font-size: 23px
+      line-height: 30px
+      text-align: left
+      padding: 0
+      float: left
+
+    .sample
+      border: 1px solid rgba(0,0,0,0.5)
+      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1)
+      +rounded(3)
+      clear: both
+      min-height: 40px
+      float: right
+      // width: 418px
+      padding: 10px
+      margin: 0 3px 5px auto
+      width: 485px
+      font-size: 12px
+      &.code
+        font-family: monospace
+      img
+        display: block
+        border: 1px solid #ffffff
+        +rounded(2)
+        
+    .used
+      display: none
+      float: left
+      padding-left: 9px
+      padding-top: 7px
+      font-size: 10px
+      strong
+        display: block
+        line-height: 1em
+
+    .rating
+      padding: 0px 0 0 7px
+      text-align: left
+      float: left
+      margin-top: -5px
+      label
+        font-size: 10px
+        font-weight: bold
+        
+      span
+        font-size: 11px
+        line-height: 15px
+        text-shadow: 1px 1px 0 rgba(255,255,255,1)
+        display: block
+        margin: 0 15px
+        margin-bottom: 5px
+        margin-left: 0
+        
+        strong
+          +rounded(6)
+          background: rgba(0,0,0,0.1)
+          padding: 2px 5px
+          text-shadow: 1px 1px 0 rgba(255,255,255,0.4)
+          font-size: 9px
+
+        &.like strong
+          background: rgba(80,130,0,0.3)
+          color: #508200
+
+        &.dislike strong
+          background: rgba(160,0,0,0.3)
+          color: #a00000
+
+      a
+        height: 17px
+        padding: 0 0 0 20px
+        display: inline-block
+        vertical-align: middle
+        text-decoration: none
+        font-weight: bold
+
+      .like a
+        color: #4e8400
+        background: url("/images/rating.png") left 0 no-repeat
+
+      .dislike a
+        color: #a10000
+        background: url("/images/rating.png") left -50px no-repeat
+  
+  .slider
+    float: left
+    margin-top: 2px
+    margin-left: 3px
+    margin-right: 10px
+    // iphone
+    .iPhoneCheckContainer
+      user-select: none
+      -moz-user-select: none
+      -khtml-user-select: none
+
+      label
+        user-select: none
+        -moz-user-select: none
+        -khtml-user-select: none
+
+
+    .iPhoneCheckDisabled
+      filter: alpha(opacity = 50)
+      -moz-opacity: 0.5
+      -khtml-opacity: 0.5
+      opacity: 0.5
+
+
+    .iPhoneCheckContainer
+      position: relative
+      height: 20px
+      cursor: pointer
+      overflow: hidden
+      float: right
+      margin: 0 2px 10px 0
+
+      input
+        position: absolute
+        top: 5px
+        left: 30px
+        filter: alpha(opacity = 0)
+        -moz-opacity: 0
+        -khtml-opacity: 0
+        opacity: 0
+
+      label
+        white-space: nowrap
+        font-size: 11px
+        line-height: 10px
+        font-weight: bold
+        font-family: Helvetica Neue, Arial, Helvetica, sans-serif
+        text-transform: uppercase
+        cursor: pointer
+        display: block
+        height: 20px
+        position: absolute
+        width: auto
+        top: 0
+        padding-top: 5px
+        overflow: hidden
+
+
+    label
+      &.iPhoneCheckLabelOn
+        color: #fff
+        background: url("/images/slider/on.png") no-repeat
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.6)
+        left: 0
+        padding-top: 5px
+        text-align: left
+
+        span
+          padding-left: 10px
+
+      &.iPhoneCheckLabelOff
+        color: #8B8B8B
+        background: url("/images/slider/off.png") no-repeat right 0
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.6)
+        text-align: right
+        right: 0
+
+        span
+          padding-right: 9px
+
+
+    .iPhoneCheckHandle
+      display: block
+      height: 20px
+      cursor: pointer
+      position: absolute
+      top: 0
+      left: 0
+      width: 0
+      background: url("/images/slider/slider_left.png") no-repeat
+      padding-left: 3px
+
+
+    .iPhoneCheckHandleRight
+      height: 100%
+      width: 100%
+      padding-right: 3px
+      background: url("/images/slider/slider_right.png") no-repeat right 0
+
+
+    .iPhoneCheckHandleCenter
+      height: 100%
+      width: 100%
+      background: url("/images/slider/slider_center.png")
+  

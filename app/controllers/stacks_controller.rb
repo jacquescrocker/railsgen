@@ -1,5 +1,5 @@
 class StacksController < ApplicationController
-  def index
+  def landing
   end
   
   def download

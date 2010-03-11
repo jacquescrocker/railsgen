@@ -6,9 +6,16 @@ class Component
 
   # name of the component (used for urls, etc)
   key :name, :required => true
+
+  # tagline
+  key :tagline, String
   
-  # basic description of the component
+  # expanded description of the component
   key :description, String
+
+  # sample code
+  key :sample, String
+
   
   # where to get more info
   key :info_url, String
