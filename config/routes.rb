@@ -45,8 +45,12 @@ RailsGenerate::Application.routes.draw do |map|
 
   resources :stacks
   resources :steps
-
+  
+  # define the coming soon page
   match "comingsoon" => "pages#comingsoon"
+  
+  # define the homepage
+  match "preview" => "stacks#landing", :as => :home
   
   # put up splash pages
   if Rails.env.production?
