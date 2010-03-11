@@ -10,9 +10,6 @@ RailsGenerate::Application.routes.draw do |map|
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -46,9 +43,13 @@ RailsGenerate::Application.routes.draw do |map|
   #     resources :products
   #   end
 
+  resources :stacks
+
+  # root :to => "stacks#index"
+  root :to => "pages#comingsoon"
+
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => "pages#landing"
+  # just remember to delete public/index.html.  
 
   # See how all your routes lay out with "rake routes"
 
