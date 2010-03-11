@@ -1,0 +1,4 @@
+# add erector gem
+gem "erector"
+
+# TODO: set up some other stuff

@@ -1,0 +1,3 @@
+run "curl -L http://code.jquery.com/jquery-latest.js > public/javascripts/jquery.js"
+
+# TODO: IF PROTOTYPE IS NOT SELECTED, DELETE IT
