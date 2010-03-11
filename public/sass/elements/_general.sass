@@ -1,25 +1,29 @@
 html
   height: 100%
 
+
 body
   min-height: 100%
   padding: 0
   margin: 0
   background: #f6f3e8
 
+
 * html body
   height: 100%
+
 
 \:
   &:-moz-selection, &:selection
     background: rgba(0,0,0,0.05)
 
+
 #body
   position: relative
   height: auto
   background: url("/images/header_background.png") center top repeat-x
-  // min-height: 100%
-  min-height: 621px
+  min-height: 100%
+
 
 #container
   background: url("/images/railways.png") center bottom no-repeat
@@ -27,10 +31,12 @@ body
   height: 100%
   position: relative
 
+
 #content_container
   padding: 0 0 320px 0
   background: url("/images/clouds.png") center top no-repeat
   position: relative
+
 
 #content
   width: 960px
@@ -39,14 +45,17 @@ body
   background: rgba(255,245,225,0.6)
   -moz-box-shadow: 0 0 10px rgba(70,50,10,0.1)
 
+
 #content_inside
   padding: 40px
+
 
 #navigation_container
   width: 960px
   margin: 0 auto 40px auto
   position: relative
   text-align: right
+
 
 .navigation
   +rounded-bottom(10)
@@ -67,6 +76,7 @@ body
     a
       color: #941111
 
+
 .train_wrapper
   width: 960px
   height: 0
@@ -75,6 +85,7 @@ body
   left: 50%
   margin-left: -480px
   background: black
+
 
 .train
   width: 252px
@@ -91,6 +102,18 @@ body
   z-index: 101
   bottom: 90px
   right: 25px
+
+
+.box
+  +rounded(8)
+  position: relative
+  z-index: 200
+  padding: 20px
+  margin: 0 0 40px 0
+  background: rgba(255,255,255,0.5)
+  border: 1px solid rgba(170,140,0,0.25)
+  -moz-box-shadow: 1px 1px 0 rgba(255,255,255,0.8)
+
 
 #generate
   +rounded(8)
@@ -139,13 +162,143 @@ body
     -moz-box-shadow: inset 0 0 6px rgba(140,110,30,0.2)
     +rounded(6)
 
+  &.single
+    float: left
+    margin: 0 40px 0 0
+    padding: 10px
+
+    ul
+      max-width: 260px
+      min-width: 200px
+      float: none
+      padding: 0
+      display: block
+
+      li
+        float: none
+        margin: 0 0 10px 0
+
+        &:last-child
+          margin: 0
+
+
+.app_item
+  float: left
+  margin: 0 20px 0 0
+  width: 450px
+
+  li
+    margin: 0 0 30px 0
+    padding: 10px
+    clear: both
+    display: block
+
+    &:last-child
+      margin: 0
+
+  h2
+    font-size: 16px
+    height: 20px
+    line-height: 22px
+    text-align: left
+    padding: 0
+    float: left
+
+  .screenshot
+    border: 1px solid rgba(0,0,0,0.5)
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1)
+    +rounded(3)
+    clear: both
+    width: 418px
+    height: 158px
+    margin: 0 auto
+
+    img
+      display: block
+      border: 1px solid #ffffff
+      +rounded(2)
+
+  .rating
+    padding: 5px 0 0 5px
+    text-align: center
+
+    span
+      font-size: 11px
+      line-height: 15px
+      display: inline-block
+      margin: 0 30px
+      text-shadow: 1px 1px 0 rgba(255,255,255,1)
+
+      strong
+        +rounded(6)
+        background: rgba(0,0,0,0.1)
+        padding: 2px 5px
+        text-shadow: 1px 1px 0 rgba(255,255,255,0.4)
+        font-size: 9px
+
+      &.like strong
+        background: rgba(80,130,0,0.3)
+        color: #508200
+
+      &.dislike strong
+        background: rgba(160,0,0,0.3)
+        color: #a00000
+
+    a
+      height: 17px
+      padding: 0 0 0 20px
+      display: inline-block
+      text-decoration: none
+      font-weight: bold
+
+    .like a
+      color: #4e8400
+      background: url("/images/rating.png") left 0 no-repeat
+
+    .dislike a
+      color: #a10000
+      background: url("/images/rating.png") left -50px no-repeat
+
+
+.box.comments
+  float: right
+  width: 280px
+  padding: 10px
+
+
+.result_url
+  text-align: center
+  font-size: 18px
+  padding: 10px 20px
+  position: relative
+  margin: 20px 100px 40px 100px
+
+  a
+    display: block
+    font-size: 10px
+    text-transform: uppercase
+    position: absolute
+    top: 28%
+    right: 10px
+    color: #2d2d2d
+    text-decoration: none
+    font-weight: bold
+
+
+.result_script
+  font-size: 12px
+  line-height: 14px
+
+
 #popular
   h3
     float: left
     line-height: 25px
+
   ul
     min-height: 100px
     clear: both
+
     li
       width: 230px
       float: left
@@ -185,3 +338,103 @@ body
     text-align: center
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5)
     color: #5b0001
+
+
+.iPhoneCheckContainer
+  user-select: none
+  -moz-user-select: none
+  -khtml-user-select: none
+
+  label
+    user-select: none
+    -moz-user-select: none
+    -khtml-user-select: none
+
+
+.iPhoneCheckDisabled
+  filter: alpha(opacity = 50)
+  -moz-opacity: 0.5
+  -khtml-opacity: 0.5
+  opacity: 0.5
+
+
+.iPhoneCheckContainer
+  position: relative
+  height: 20px
+  cursor: pointer
+  overflow: hidden
+  float: right
+  margin: 0 2px 10px 0
+
+  input
+    position: absolute
+    top: 5px
+    left: 30px
+    filter: alpha(opacity = 0)
+    -moz-opacity: 0
+    -khtml-opacity: 0
+    opacity: 0
+
+  label
+    white-space: nowrap
+    font-size: 11px
+    line-height: 10px
+    font-weight: bold
+    font-family: Helvetica Neue, Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    cursor: pointer
+    display: block
+    height: 20px
+    position: absolute
+    width: auto
+    top: 0
+    padding-top: 5px
+    overflow: hidden
+
+
+label
+  &.iPhoneCheckLabelOn
+    color: #fff
+    background: url("/images/slider/on.png") no-repeat
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6)
+    left: 0
+    padding-top: 5px
+    text-align: left
+
+    span
+      padding-left: 10px
+
+  &.iPhoneCheckLabelOff
+    color: #8B8B8B
+    background: url("/images/slider/off.png") no-repeat right 0
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.6)
+    text-align: right
+    right: 0
+
+    span
+      padding-right: 9px
+
+
+.iPhoneCheckHandle
+  display: block
+  height: 20px
+  cursor: pointer
+  position: absolute
+  top: 0
+  left: 0
+  width: 0
+  background: url("/images/slider/slider_left.png") no-repeat
+  padding-left: 3px
+
+
+.iPhoneCheckHandleRight
+  height: 100%
+  width: 100%
+  padding-right: 3px
+  background: url("/images/slider/slider_right.png") no-repeat right 0
+
+
+.iPhoneCheckHandleCenter
+  height: 100%
+  width: 100%
+  background: url("/images/slider/slider_center.png")
