@@ -19,7 +19,7 @@ Rspec.configure do |config|
   # config.mock_with :rr
   config.mock_with :rspec
   
-  require 'db/seeds'
+  require 'db/seed_data'
   
   puts "using factories from spec/factories/*"
   require 'factory_girl'
