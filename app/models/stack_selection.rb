@@ -1,4 +1,4 @@
-class Stack
+class StackSelection
   include MongoMapper::EmbeddedDocument
   
   belongs_to :component
