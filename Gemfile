@@ -7,6 +7,8 @@ gem "ruby-debug"
 
 gem "haml"
 gem "compass", ">= 0.10.0.rc1"
+
+# required for getting sass to work with heroku
 gem "hassle"
 
 gem "will_paginate", ">= 3.0.pre"
@@ -17,6 +19,8 @@ gem "mongo_mapper", ">= 0.7.1"
 
 gem "compass-960-plugin"
 
+gem "mongrel"
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
@@ -24,12 +28,3 @@ group :test do
   gem "factory_girl", :require => nil
   gem "rspec-rails", ">= 2.0.0.beta"
 end
-
-## Bundle edge rails:
-# gem "rails", :git => "git://github.com/rails/rails.git"
-
-## Bundle gems used only in certain environments:
-# gem "rspec", :group => :test
-# group :test do
-#   gem "webrat"
-# end
