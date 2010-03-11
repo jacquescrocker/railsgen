@@ -44,9 +44,13 @@ RailsGenerate::Application.routes.draw do |map|
   #   end
 
   resources :stacks
-
-  # root :to => "stacks#index"
-  root :to => "pages#comingsoon"
+  
+  # put up splash pages
+  if Rails.env.production?
+    root :to => "pages#comingsoon"
+  else
+    root :to => "stacks#index"
+  end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.  
