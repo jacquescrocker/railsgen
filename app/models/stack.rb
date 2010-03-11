@@ -11,6 +11,10 @@ class Stack
   
   many :stack_selections
 
+  def to_param
+    name
+  end
+
   # store when stuff was created, etc
   timestamps!
 end

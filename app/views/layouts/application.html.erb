@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" />
 
   <!-- Default javascripts -->
-  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/default.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
@@ -31,6 +31,7 @@
 <div id="body">
   <div id="container">
     <div id="content_container">
+      <%= render :partial => "shared/header" unless @disable_header %>
       <%= yield %>
     </div>
   </div>

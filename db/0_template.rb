@@ -10,7 +10,7 @@ puts "Creating Templating Components"
 
 code_path = Rails.root.join("db", "0_template")
 step = Step.create :title => "Templating", 
-                   :name => "templates", 
+                   :name => "template", 
                    :order => 0
 
 # ERB

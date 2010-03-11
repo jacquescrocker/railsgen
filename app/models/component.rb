@@ -28,11 +28,15 @@ class Component
   key :includes_components, Array
   
   # see if the component is an addon to another component
-  key :addon_name, String, :default => nil
+  key :addon_group, String, :default => nil
 
   # for large lists of components, just group them via this mini_group title
   key :mini_group, String, :default => nil
   
   belongs_to :step
+
+  def to_param
+    name
+  end
 
 end

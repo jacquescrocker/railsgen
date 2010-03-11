@@ -14,4 +14,8 @@ class Step
   
   has_many :components
   
+  def to_param
+    name
+  end
+  
 end

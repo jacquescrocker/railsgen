@@ -44,6 +44,7 @@ RailsGenerate::Application.routes.draw do |map|
   #   end
 
   resources :stacks
+  resources :steps
 
   match "comingsoon" => "pages#comingsoon"
   
