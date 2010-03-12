@@ -4,6 +4,9 @@ class Step
   # displayed title of the step
   key :title, String
   
+  # displayed on the top of the page
+  key :header, String
+  
   # name of the step (used for urls, etc)
   key :name, String
   
@@ -17,7 +20,6 @@ class Step
   def to_param
     name
   end
-  
   
   def self.list
     all(:order => [:order.asc])

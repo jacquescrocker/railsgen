@@ -8,14 +8,17 @@
 puts "Creating Database Components"
 
 code_path = Rails.root.join("db", "1_orm")
-step = Step.create :title => "Database", 
-                   :name => "orm", 
+step = Step.create :name => "orm", 
+                   :title => "Database", 
+                   :primary_group => true,
+                   :header => "Choose a Database Library",
                    :order => 1
 
 # ActiveRecord
 step.components.create :title => "ActiveRecord", 
                        :name => "ar",
                        :in_rails_stack => true,
+                       :primary_group => true,
                        :info_url => "http://ar.rubyonrails.org",
                        :code => code_path.join("ar.railsgen").read,
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -23,6 +26,7 @@ step.components.create :title => "ActiveRecord",
 # Datamapper
 step.components.create :title => "Datamapper", 
                        :name => "dm",
+                       :primary_group => true,
                        :info_url => "http://datamapper.org",
                        :source_url => "http://github.com/datamapper/dm-core",
                        :code => code_path.join("dm.railsgen").read,
@@ -32,6 +36,7 @@ step.components.create :title => "Datamapper",
 # Sequel
 step.components.create :title => "Sequel", 
                        :name => "sequel",
+                       :primary_group => true,
                        :info_url => "http://sequel.rubyforge.org",
                        :source_url => "http://github.com/jeremyevans/sequel",
                        :code => code_path.join("sequel.railsgen").read,
@@ -41,6 +46,7 @@ step.components.create :title => "Sequel",
 # MongoMapper
 step.components.create :title => "MongoMapper", 
                        :name => "mongomapper",
+                       :primary_group => true,
                        :info_url => "http://mongomapper.com",
                        :source_url => "http://github.com/jnunemaker/mongomapper",
                        :code => code_path.join("mongomapper.railsgen").read,

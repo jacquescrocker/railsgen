@@ -4,6 +4,6 @@ class StepsController < ApplicationController
     @step = Step.first(:name => params[:id])
 
     # get a list of the components
-    @components = @step.components.all
+    @components = @step.components.all(:primary_group => true)
   end
 end

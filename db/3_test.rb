@@ -7,14 +7,16 @@
 puts "Creating Testing Components"
 
 code_path = Rails.root.join("db", "3_test")
-step = Step.create :title => "Testing", 
-                   :name => "test", 
+step = Step.create :name => "test", 
+                   :title => "Testing", 
+                   :header => "Choose a Testing Library",
                    :order => 3
 
 # TestUnit
 step.components.create :title => "TestUnit", 
                        :name => "testunit",
                        :in_rails_stack => true,
+                       :primary_group => true,
                        :info_url => "http://ruby-doc.org/stdlib/libdoc/test/unit/rdoc/classes/Test/Unit.html",
                        :code => code_path.join("testunit.railsgen").read,
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -22,6 +24,7 @@ step.components.create :title => "TestUnit",
 # RSpec
 step.components.create :title => "RSpec", 
                        :name => "rspec",
+                       :primary_group => true,
                        :info_url => "http://rspec.info",
                        :source_url => "http://github.com/dchelimsky/rspec",
                        :code => code_path.join("rspec.railsgen").read,
@@ -31,6 +34,7 @@ step.components.create :title => "RSpec",
 # Shoulda
 step.components.create :title => "Shoulda", 
                        :name => "shoulda",
+                       :primary_group => true,
                        :info_url => "http://www.thoughtbot.com/projects/shoulda",
                        :source_url => "http://github.com/thoughtbot/shoulda",
                        :code => code_path.join("shoulda.railsgen").read,

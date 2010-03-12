@@ -7,13 +7,15 @@
 puts "Creating Javascript Components"
 
 code_path = Rails.root.join("db", "2_js")
-step = Step.create :title => "Javascript", 
-                   :name => "js", 
+step = Step.create :name => "js", 
+                   :title => "Javascript", 
+                   :header => "Choose A Javascript Library",
                    :order => 2
 
 # jQuery
 step.components.create :title => "jQuery", 
                        :name => "jquery",
+                       :primary_group => true,
                        :info_url => "http://jquery.org",
                        :source_url => "http://github.com/jquery/jquery",
                        :code => code_path.join("jquery.railsgen").read,
@@ -23,6 +25,7 @@ step.components.create :title => "jQuery",
 step.components.create :title => "Prototype", 
                        :name => "prototype",
                        :in_rails_stack => true,
+                       :primary_group => true,
                        :info_url => "http://www.prototypejs.org",
                        :source_url => "http://github.com/sstephenson/prototype",
                        :code => code_path.join("prototype.railsgen").read,
@@ -31,6 +34,7 @@ step.components.create :title => "Prototype",
 # MooTools
 step.components.create :title => "MooTools", 
                        :name => "mootools",
+                       :primary_group => true,
                        :info_url => "http://mootools.net",
                        :source_url => "http://github.com/mootools/mootools-core",
                        :code => code_path.join("mootools.railsgen").read,

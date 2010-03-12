@@ -21,6 +21,8 @@ class Component
   key :info_url, String
   key :source_url, String
 
+  key :comments_count, Integer, :default => 0
+
   # render code for the actual generator
   key :code, String
   
@@ -33,6 +35,9 @@ class Component
   # define the includes list. sometimes a component is a superset of another, 
   # so if its defined, hide the other one that it already includes
   key :includes_components, Array
+  
+  # see if the component is in the primary
+  key :primary_group, Boolean, :default => false
   
   # see if the component is an addon to another component
   key :addon_group, String, :default => nil
