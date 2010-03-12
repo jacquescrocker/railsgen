@@ -1,10 +1,10 @@
-haml = Stack.find_or_create_by_name "haml"
-haml.update_attributes :landing_order => 10
-haml.generate!
+stack = Stack.find_or_create_by_name "haml"
+stack.update_attributes :landing_order => 10
+stack.generate!
 
 # clear existing selections
-haml.stack_selections.clear
+stack.stack_selections.clear
 
-haml.select_component(Component.find_by_name("jquery"))
-haml.select_component(Component.find_by_name("haml"))
-haml.save
+stack.select_component(Component.find_by_name("jquery"))
+stack.select_component(Component.find_by_name("haml"))
+stack.save

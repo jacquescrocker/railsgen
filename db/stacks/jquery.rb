@@ -1,9 +1,9 @@
-jquery = Stack.find_or_create_by_name "jquery"
-jquery.update_attributes :landing_order => 9
-jquery.generate!
+stack = Stack.find_or_create_by_name "jquery"
+stack.update_attributes :landing_order => 9
+stack.generate!
 
 # clear existing selections
-jquery.stack_selections.clear
+stack.stack_selections.clear
 
-jquery.select_component(Component.find_by_name("jquery"))
-jquery.save
+stack.select_component(Component.find_by_name("jquery"))
+stack.save
