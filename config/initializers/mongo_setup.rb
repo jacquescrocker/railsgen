@@ -1,4 +1,4 @@
-puts "WTF!!!"
+
 # MongoMapper.database = ENV["MONGOHQ_DATABASE"]
 MongoMapper.config = {
   "production" => {
