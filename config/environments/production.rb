@@ -22,6 +22,19 @@ RailsGenerate::Application.configure do
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
   
+  # setup mongodb on heroku
+  config.after_initialize do
+    MongoMapper.connect({
+      "host" => ENV["MONGOHQ_HOST"],
+      "port" => ENV["MONGOHQ_PORT"],
+      "database" => ENV["MONGOHQ_DATABASE"],
+      "username" => ENV["MONGOHQ_USERNAME"],
+      "password" => ENV["MONGOHQ_PASSWORD"]
+    })
+  end
+  
+  
+  
   # lets do some h4x0ring!
   class Hassle::Compiler
     def css_location(path)

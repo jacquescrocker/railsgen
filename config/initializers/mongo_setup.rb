@@ -1,1 +1,0 @@
-MongoMapper.database = "railsgen_#{Rails.env}"
