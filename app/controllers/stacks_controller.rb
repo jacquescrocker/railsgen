@@ -1,5 +1,6 @@
 class StacksController < ApplicationController
   def landing
+    @stacks = Stack.landing_stacks
   end
   
   def download

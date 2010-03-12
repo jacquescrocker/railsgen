@@ -1,8 +1,9 @@
 class StepsController < ApplicationController
   def show
-    # todo: find labeled step (by name)
-    # debugger
+    # get the current step
     @step = Step.first(:name => params[:id])
-    
+
+    # get a list of the components
+    @components = @step.components.all
   end
 end

@@ -1,7 +1,7 @@
-<div id="content">
+<div id="content" class="landing_page">
   <div id="content_inside">
 
-    <h1>Generate a brand spankin' new Rails App</h1>
+    <h2>Generate a new Rails 3 App</h2>
 
     <div id="steps">
       <ul>
@@ -20,7 +20,7 @@
         <p>You can choose from several databases: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>SQLite</strong>, <strong>Oracle</strong> etc.</p>
       </div>
 
-      <a href="#" class="button generate floatr"><strong>Start now</strong></a>
+      <a id="start_now" href="<%= url(:step, Step.first) %>" class="button generate floatr"><strong>Start now</strong></a>
 
       <div class="clear"></div>
     </div>
