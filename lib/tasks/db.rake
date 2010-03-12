@@ -2,7 +2,7 @@ namespace :db do
 
   desc 'Delete data and seed'
   task :reseed => :environment do
-    Rake::Task["db:clear"].invoke
+    Rake::Task["db:clear_data"].invoke
     Rake::Task["db:seed"].invoke
   end
   
