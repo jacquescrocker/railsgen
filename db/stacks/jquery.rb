@@ -1,9 +1,9 @@
-rspec = Stack.find_or_create_by_name "jquery"
-rspec.update_attributes :landing_order => 10
-rspec.generate!
+jquery = Stack.find_or_create_by_name "jquery"
+jquery.update_attributes :landing_order => 9
+jquery.generate!
 
 # clear existing selections
-rspec.stack_selections.clear
+jquery.stack_selections.clear
 
-rspec.select_component(Component.find_by_name("jquery"))
-rspec.save
+jquery.select_component(Component.find_by_name("jquery"))
+jquery.save
