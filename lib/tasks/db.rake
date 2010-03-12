@@ -1,4 +1,11 @@
 namespace :db do
+
+  desc 'Delete data and seed'
+  task :reseed => :environment do
+    Rake::Task["db:drop"].invoke
+    Rake::Task["db:seed"].invoke
+  end
+
   desc 'Load the seed data from db/seed_data.rb'
   task :seed => :environment do
     seed_file = File.join(Rails.root, 'db', 'seed_data.rb')
@@ -18,8 +25,8 @@ namespace :db do
   end
 
   desc "Migrate the mongodb database (does nothing)"
-  task :migrate => :environment do
-    puts "No migrations needed."
+  task :migrate => :seed do
+    Rake::Task
   end
   
   namespace :test do

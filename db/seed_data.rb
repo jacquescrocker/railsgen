@@ -1,8 +1,5 @@
 puts "Creating Steps"
 
-Step.destroy_all
-Component.destroy_all
-
 require "db/0_template"
 require "db/1_orm"
 require "db/2_js"
