@@ -1,0 +1,6 @@
+#steps.single
+  %ul
+    - Step.list.each do |step|
+      %li{add_class("active", :if => @step.id == step.id)}
+        %a{:href => url(:step, step)}
+          %strong= step.title

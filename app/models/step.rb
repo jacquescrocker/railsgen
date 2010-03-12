@@ -18,4 +18,8 @@ class Step
     name
   end
   
+  
+  def self.list
+    all(:order => [:order.asc])
+  end
 end
