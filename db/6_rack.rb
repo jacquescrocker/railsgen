@@ -10,8 +10,9 @@ code_path = Rails.root.join("db", "6_rack")
 step = Step.create :name => "rack",  
                    :title => "Middleware", 
                    :primary_group => true,
+                   :order => 6,
                    :header => "Choose Rack Middleware",
-                   :order => 6
+                   :description => "Web server copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # Rack::Bug
 step.components.create :title => "Rack::Bug", 

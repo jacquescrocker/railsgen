@@ -9,8 +9,9 @@ puts "Creating Testing Components"
 code_path = Rails.root.join("db", "3_test")
 step = Step.create :name => "test", 
                    :title => "Testing", 
+                   :order => 3,
                    :header => "Choose a Testing Library",
-                   :order => 3
+                   :description => "Testing copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # TestUnit
 step.components.create :title => "TestUnit", 

@@ -11,8 +11,9 @@ puts "Creating Templating Components"
 code_path = Rails.root.join("db", "0_template")
 step = Step.create :name => "template", 
                    :title => "Templating", 
+                   :order => 0,
                    :header => "Choose a Templating Library", 
-                   :order => 0
+                   :description => "Templating library copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # ERB
 step.components.create :title => "ERB", 

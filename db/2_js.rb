@@ -9,8 +9,9 @@ puts "Creating Javascript Components"
 code_path = Rails.root.join("db", "2_js")
 step = Step.create :name => "js", 
                    :title => "Javascript", 
-                   :header => "Choose A Javascript Library",
-                   :order => 2
+                   :order => 2,
+                   :header => "Choose a Javascript Library",
+                   :description => "Javascript copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # jQuery
 step.components.create :title => "jQuery", 

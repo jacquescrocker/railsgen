@@ -6,7 +6,11 @@ jQuery(document).ready(resizeWindow);
 jQuery(window).resize(resizeWindow);
 
 
-
+$("#steps .step_hover a").live("mouseover", function() {
+  console.log("IN!"+$(this).attr("data-description-panel"));
+  $("#steps .description:visible").hide();
+  $("."+$(this).attr("data-description-panel")).show();
+});
 
 /*!
 // iPhone-style Checkboxes jQuery plugin

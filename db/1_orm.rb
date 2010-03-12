@@ -11,8 +11,9 @@ code_path = Rails.root.join("db", "1_orm")
 step = Step.create :name => "orm", 
                    :title => "Database", 
                    :primary_group => true,
+                   :order => 1,
                    :header => "Choose a Database Library",
-                   :order => 1
+                   :description => "Database copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # ActiveRecord
 step.components.create :title => "ActiveRecord", 

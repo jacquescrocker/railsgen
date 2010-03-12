@@ -8,8 +8,9 @@ puts "Creating Reusable App Components"
 code_path = Rails.root.join("db", "7_apps")
 step = Step.create :name => "apps", 
                    :title => "Reusable Apps", 
+                   :order => 7,
                    :header => "Choose Some Starter Reusable Apps",
-                   :order => 7
+                   :description => "Reusable app copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # Devise
 step.components.create :title => "Devise", 

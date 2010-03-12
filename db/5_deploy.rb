@@ -10,8 +10,9 @@ puts "Creating Deployment Components"
 code_path = Rails.root.join("db", "5_deploy")
 step = Step.create :name => "deploy", 
                    :title => "Deployment", 
+                   :order => 5,
                    :header => "Choose a Deployment strategy",
-                   :order => 5
+                   :description => "Deploy copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # Capistrano
 step.components.create :title => "Capistrano", 

@@ -10,8 +10,9 @@ puts "Creating Web Server Components"
 code_path = Rails.root.join("db", "4_server")
 step = Step.create :name => "server", 
                    :title => "Web Server", 
+                   :order => 4,
                    :header => "Choose a Web Server",
-                   :order => 4
+                   :description => "Web server copy ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
 # Mongrel
 step.components.create :title => "Mongrel", 
