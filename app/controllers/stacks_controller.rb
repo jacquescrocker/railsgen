@@ -1,6 +1,7 @@
 class StacksController < ApplicationController
   def landing
     @stacks = Stack.landing_stacks
+    @steps = Step.list
   end
   
   def edit

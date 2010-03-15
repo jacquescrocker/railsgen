@@ -1,0 +1,40 @@
+#content.landing_page
+  .inner
+    %h2 Generate a new Ruby on Rails 3.0 App
+    
+    #steps
+      %ul.step_hover
+        - @steps.to_a.each do |step|
+          %li
+            = link_to step.title, url(:step, step), "data-description-panel" => "descriptions_#{step.name}"
+      
+      .descriptions
+        - @steps.to_a.each_with_index do |step, i|
+          .description{hidden(:if => i != 0).merge(:class => "descriptions_#{step.name}")}
+            %h3= step.title
+            %p= raw step.description
+      
+      %a#start_now.button.generate{:href => url(:step, @steps.to_a.first || "#")}
+        %strong Start now
+      
+      = clear
+    
+    
+    %h2 Pick a popular Rails App Stack
+    #popular
+      %ul.equal-heights
+        - @stacks.each do |stack|
+          %li
+            %h3= stack.title
+            %a.button.generate{:href => "#"}
+              %strong Customize
+            %code
+              rails -m http://#{stack.name}.railsgen.com
+            
+            %ul
+              - stack.components.each do |component|
+                %li 
+                  = component.title
+                  = "(#{component.version})" if component.version.present?
+            
+            = clear

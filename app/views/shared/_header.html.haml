@@ -1,0 +1,11 @@
+#navigation_container
+  #logo
+    = link_to image_tag("logo.png", :alt => "RailsGen"), url(:home)
+
+  
+  %ul.navigation
+    %li= link_to "Profile", "#"
+    %li= link_to "My Stacks", "#"
+    %li= link_to "Log Out", "#"
+  
+  = clear
