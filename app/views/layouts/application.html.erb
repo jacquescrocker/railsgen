@@ -20,7 +20,12 @@
 
   <!-- Default stylesheets -->
   <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" />
-
+  
+  <%= javascript_include_tag "jquery/jquery",
+                             "jquery/iphone_checkboxes.js",
+                             "default",
+                             :cache => "site" %>
+  
   <!-- Default javascripts -->
   <script src="/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/default.js" type="text/javascript" charset="utf-8"></script>
