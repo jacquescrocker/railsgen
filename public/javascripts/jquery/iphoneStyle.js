@@ -218,11 +218,3 @@ $[iphoneStyle].defaults = {
 };
 
 })(jQuery, 'iphoneStyle');
-
-
-jQuery(document).ready(function(){
- jQuery(":checkbox.slider").iphoneStyle({
-   checkedLabel: "On",
-   uncheckedLabel: "Off"
- });
-});

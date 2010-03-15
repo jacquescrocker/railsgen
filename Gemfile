@@ -11,6 +11,9 @@ gem "compass", ">= 0.10.0.rc1"
 # required for getting sass to work with heroku
 gem "hassle"
 
+gem "better_partials", ">= 1.0.1"
+gem "viewfu", ">= 1.0.1"
+
 gem "will_paginate", ">= 3.0.pre"
 gem "mongo", ">= 0.19"
 gem "mongo_ext", ">= 0.19"

@@ -1,0 +1,44 @@
+#content.step_page
+  .inner
+    = partial "steps/progress"
+    
+    %h1 #{@step.header}:
+    
+    %ul.app_item
+      - @components.each do |component|
+        %li.box
+          .slider
+            %input.checkbox.slider{:type => "checkbox", 
+                                   :id => "component_#{component.name}",
+                                   :name => "component[#{component.name}]" }
+          %h2= component.title
+          %a.comments{:href => "#"}
+            - if component.comments_count > 0
+              Comments (#{component.comments_count})
+            - else
+              Post a Comment
+          
+          %p.tagline
+            == ... about #{component.title.downcase} ...
+          
+          = clear
+          
+          .sample.code
+            = lorem
+          
+          .rating
+            %label Like it?
+            %span.like
+              %a{:href => "#"}
+              %strong 34
+            %span.dislike
+              %a{:href => "#"}
+              %strong 10
+          
+          .used
+            %strong Used
+            5 times
+          
+          = clear
+    
+    = clear

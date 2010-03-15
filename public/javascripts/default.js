@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  // bind iphone checkboxes
+  $(":checkbox.slider").iphoneStyle({
+    checkedLabel: "&radic;",
+    uncheckedLabel: "x"
+  });
   
   $("#steps .step_hover a").live("mouseover", function() {
     // console.log("IN!"+$(this).attr("data-description-panel"));
