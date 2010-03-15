@@ -1,4 +1,5 @@
 stack = Stack.find_or_create_by_name "rspec"
+stack.title = "RSpec Stack"
 stack.update_attributes :landing_order => 10
 stack.generate!
 

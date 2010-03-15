@@ -6,12 +6,10 @@ namespace :db do
     Rake::Task["db:seed"].invoke
   end
   
-  desc 'Clear the data using db/clear_data.rb'
+  desc 'Clear all the data'
   task :clear_data => :environment do
-    clear_data_file = File.join(Rails.root, 'db', 'clear_data.rb')
-    load(clear_data_file) if File.exist?(clear_data_file)
+    MongoMapper.database.collections.each{|col| col.drop unless col.name == 'system.users' }
   end
-  
   
   desc 'Load the seed data from db/seed_data.rb'
   task :seed => :environment do

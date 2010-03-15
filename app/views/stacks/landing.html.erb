@@ -30,43 +30,19 @@
     <h2>Pick a popular Rails App stack</h2>
 
     <div id="popular">
-      <ul>
-        <li class="default">
-          <h3>Default Stack</h3>
-          <a href="#" class="button generate floatr"><strong>Customize</strong></a>
-          <ul>
-            <li>Prototype</li>
-            <li>ActiveRecord</li>
-            <li>Test Unit</li>
-          </ul>
-          <code>rails -m http://default.railsgen.com</code>
-        </li>
-        <li class="rspec">
-          <a href="#" class="button generate floatr"><strong>Customize</strong></a>
-
-          <h3>RSpec Stack</h3>
-          <ul>
-            <li>RSpec 2</li>
-            <li>RSpec Rails</li>
-            <li>Cucumber</li>
-            <li>Capybara</li>
-            <li>Factory Girl</li>
-          </ul>
-          <code>rails -m http://rspec.railsgen.com</code>
-        </li>
-        <li class="haml">
-          <a href="#" class="button generate floatr"><strong>Customize</strong></a>
-
-          <h3>HAML Stack</h3>
-          <ul>
-            <li>RSpec 2</li>
-            <li>RSpec Rails</li>
-            <li>Cucumber</li>
-            <li>Capybara</li>
-            <li>Factory Girl</li>
-          </ul>
-          <code>rails -m http://haml.railsgen.com</code>
-        </li>
+      <ul class="equal-heights">
+        <% @stacks.each do |stack| %>
+          <li>
+            <h3><%= stack.title %></h3>
+            <a href="#" class="button generate floatr"><strong>Customize</strong></a>
+            <code>rails -m http://<%= stack.name %>.railsgen.com</code>
+            <ul>
+              <% stack.components.each do |component| %>
+                <li><%= component.title %> <%= "(#{component.version})" if component.version.present? %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
       </ul>
       <div class="clear"></div>
     </div>

@@ -1,5 +1,6 @@
 stack = Stack.find_or_create_by_name "jquery"
-stack.update_attributes :landing_order => 9
+stack.title = "jQuery Stack"
+stack.update_attributes :landing_order => 11
 stack.generate!
 
 # clear existing selections

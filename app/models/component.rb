@@ -6,7 +6,9 @@ class Component
 
   # name of the component (used for urls, etc)
   key :name, :required => true
-
+  
+  key :version, String
+  
   # tagline
   key :tagline, String
   

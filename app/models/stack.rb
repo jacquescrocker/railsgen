@@ -6,6 +6,8 @@ class Stack
   key :name, String
   # TODO: add url validator on name
   
+  key :title, String
+  
   key :generated, Boolean, :default => false
   key :number, Integer
   
@@ -30,11 +32,15 @@ class Stack
     self.number = Stack.count+1 if self.number.blank?
     self.save!
   end
+  
+  def components
+    stack_selections.map(&:component)
+  end
 
   # adds a specific component
   def select_component(component)
     # make sure its not already added
-    existing = stack_selections.map(&:component).map(&:name)    
+    existing = components.map(&:name)
     return if existing.include?(component.name)
     
     # otherwise add it
@@ -52,7 +58,7 @@ class Stack
   # query helpers
   
   def self.landing_stacks
-    all(:landing_order => {:$gt => 1})
+    all(:landing_order => {:$gt => 1}, :order => [:landing_order.desc])
   end
   
 end

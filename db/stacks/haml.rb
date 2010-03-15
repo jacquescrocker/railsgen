@@ -1,4 +1,5 @@
 stack = Stack.find_or_create_by_name "haml"
+stack.title = "Haml Stack"
 stack.update_attributes :landing_order => 10
 stack.generate!
 
