@@ -22,7 +22,9 @@ gem "mongo_mapper", ">= 0.7.1"
 
 gem "compass-960-plugin"
 
-gem "mongrel"
+group :development do
+  gem "mongrel"
+end
 
 group :test do
   gem 'capybara'
