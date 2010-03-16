@@ -60,3 +60,16 @@ step.components.create :title => "Erector",
                        :code => code_path.join("erector.railsgen").read,
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
+
+# HAML Addons:
+# - compass
+
+# carrier_wave
+step.components.create :addon_group => "haml",
+                       :title => "Compass", 
+                       :name => "compass",
+                       :depends_on_components => ["haml"],
+                       :info_url => "http://compass-style.org",
+                       :source_url => "http://github.com/chriseppstein/compass",
+                       :code => code_path.join("haml", "compass.railsgen").read,
+                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
