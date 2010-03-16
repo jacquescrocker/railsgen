@@ -47,8 +47,9 @@
 
     .sample
       border: 1px solid rgba(0,0,0,0.5)
-      -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1)
-      +rounded(3)
+      +border-radius(3px)
+      +box-shadow(rgba(0,0,0,0.1), 0, 0, 5px)
+      // -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1)
       clear: both
       min-height: 40px
       float: right
@@ -62,7 +63,7 @@
       img
         display: block
         border: 1px solid #ffffff
-        +rounded(2)
+        +border-radius(2px)
         
     .used
       display: none
@@ -93,7 +94,7 @@
         margin-left: 0
         
         strong
-          +rounded(6)
+          +border-radius(6px)
           background: rgba(0,0,0,0.1)
           padding: 2px 5px
           text-shadow: 1px 1px 0 rgba(255,255,255,0.4)

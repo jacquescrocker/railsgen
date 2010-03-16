@@ -30,3 +30,4 @@ Feature: Landing Page
     Then I should see "HAML Stack" within the popular section
       And it should have 5 items in it
   
+ 
