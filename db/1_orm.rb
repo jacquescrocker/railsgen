@@ -45,12 +45,12 @@ step.components.create :title => "Sequel",
 
 
 # MongoMapper
-step.components.create :title => "MongoMapper", 
-                       :name => "mongomapper",
+step.components.create :title => "Mongoid", 
+                       :name => "mongoid",
                        :primary_group => true,
-                       :info_url => "http://mongomapper.com",
-                       :source_url => "http://github.com/jnunemaker/mongomapper",
-                       :code => code_path.join("mongomapper.railsgen").read,
+                       :info_url => "http://mongoid.org",
+                       :source_url => "http://github.com/durran/mongoid",
+                       :code => code_path.join("mongoid.railsgen").read,
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 

@@ -15,7 +15,7 @@ gem "mongo_ext", ">= 0.19"
 
 gem "mongo_mapper", ">= 0.7.1"
 
-group :development do
+group :development, :test do
   gem "ruby-debug"
   gem "mongrel"
 end

@@ -22,6 +22,7 @@ step.components.create :title => "ERB",
                        :primary_group => true,
                        :info_url => "http://ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html",
                        :code => code_path.join("erb.railsgen").read,
+                       :tagline => "default rails .erb template format using Erubis",
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 # Haml
@@ -30,6 +31,7 @@ step.components.create :title => "Haml",
                        :primary_group => true,
                        :info_url => "http://haml-lang.com",
                        :source_url => "http://github.com/nex3/haml",
+                       :tagline => "the world's greatest templating language -Hampton",
                        :code => code_path.join("haml.railsgen").read,
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
