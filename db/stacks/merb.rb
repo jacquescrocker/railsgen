@@ -4,7 +4,7 @@ stack.update_attributes :landing_order => 11
 stack.generate!
 
 # clear existing selections
-stack.stack_selections.clear
+stack.components.clear
 
 stack.select_component Component.where(:name => "jquery").first
 stack.select_component Component.where(:name => "dm").first

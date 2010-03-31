@@ -4,7 +4,7 @@
 # stack.generate!
 # 
 # # clear existing selections
-# stack.stack_selections.clear
+# stack.components.clear
 # 
 # stack.select_component Component.where(:name => "rspec").first
 # stack.select_component Component.where(:name => "cucumber").first

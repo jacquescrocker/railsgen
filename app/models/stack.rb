@@ -18,7 +18,7 @@ class Stack
   # IDEA: Allow users to give the stack a title
   # field :title, String
   
-  embeds_many :stack_selections
+  embeds_many :components
 
   # stacks can be found by name, number, or id
   def to_param
@@ -31,10 +31,6 @@ class Stack
     self.save!
   end
   
-  def components
-    stack_selections.map(&:component)
-  end
-
   # adds a specific component
   def select_component(component)
     # make sure its not already added
@@ -42,13 +38,13 @@ class Stack
     return if existing.include?(component.name)
     
     # otherwise add it
-    self.stack_selections << StackSelection.from_component(component)
+    self.components << component
   end
   
   # TODO:
   # generate the rails app template string
   def generate_template
-    # TODO: loop through the components (from stack_selections)
+    # TODO: loop through the components (from components)
     # 
     ""
   end
