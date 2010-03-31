@@ -22,6 +22,7 @@ RailsGenerate::Application.configure do
   # In production, Apache or nginx will already do this
   config.serve_static_assets = false
   
+  config.action_mailer.default_url_options = { :host => 'railsgen.com' }
   
   # lets do some h4x0ring!
   class Hassle::Compiler

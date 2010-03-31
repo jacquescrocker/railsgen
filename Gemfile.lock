@@ -1,0 +1,220 @@
+--- 
+dependencies: 
+  hassle: 
+    group: 
+    - :production
+    version: ">= 0"
+  ruby-debug: 
+    group: 
+    - :test
+    version: ">= 0"
+  viewfu: 
+    group: 
+    - :default
+    version: ">= 1.0.1"
+  compass: 
+    group: 
+    - :default
+    version: ">= 0.10.0.rc1"
+  rails: 
+    group: 
+    - :default
+    version: ">= 0"
+  mongrel: 
+    group: 
+    - :development
+    - :test
+    version: ">= 0"
+  mongo_ext: 
+    group: 
+    - :default
+    version: ">= 0.19"
+  haml: 
+    group: 
+    - :default
+    version: ">= 0"
+  database_cleaner: 
+    group: 
+    - :test
+    version: ">= 0"
+  better_partials: 
+    group: 
+    - :default
+    version: ">= 1.0.1"
+  rspec-rails: 
+    group: 
+    - :test
+    version: ">= 2.0.0.beta"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+    require: []
+
+  devise: 
+    group: 
+    - :default
+    version: ">= 0"
+  cucumber-rails: 
+    group: 
+    - :test
+    version: ">= 0"
+  mongoid: 
+    group: 
+    - :default
+    version: ">= 0"
+  capybara: 
+    group: 
+    - :test
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.3.6
+- memcache-client: 
+    version: 1.8.1
+- tzinfo: 
+    version: 0.3.18
+- activesupport: 
+    version: 3.0.0.beta1
+    source: 2
+- activemodel: 
+    version: 3.0.0.beta1
+    source: 2
+- erubis: 
+    version: 2.6.5
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.1
+- rack-test: 
+    version: 0.5.3
+- actionpack: 
+    version: 3.0.0.beta1
+    source: 2
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.5
+- mail: 
+    version: 2.1.5.3
+- text-hyphen: 
+    version: 1.0.0
+- text-format: 
+    version: 1.0.0
+- actionmailer: 
+    version: 3.0.0.beta1
+    source: 2
+- arel: 
+    version: 0.3.3
+- activerecord: 
+    version: 3.0.0.beta1
+    source: 2
+- activeresource: 
+    version: 3.0.0.beta1
+    source: 2
+- better_partials: 
+    version: 1.0.1
+- bundler: 
+    version: 0.9.14
+- culerity: 
+    version: 0.2.9
+- nokogiri: 
+    version: 1.4.1
+- ffi: 
+    version: 0.6.3
+- json_pure: 
+    version: 1.2.3
+- selenium-webdriver: 
+    version: 0.0.17
+- capybara: 
+    version: 0.3.6
+- columnize: 
+    version: 0.3.1
+- haml: 
+    version: 2.2.22
+- compass: 
+    version: 0.10.0.rc1
+- diff-lcs: 
+    version: 1.1.2
+- term-ansicolor: 
+    version: 1.0.5
+- cucumber: 
+    version: 0.6.4
+- cucumber-rails: 
+    version: 0.3.0
+- database_cleaner: 
+    version: 0.5.0
+- warden: 
+    version: 0.10.2
+- devise: 
+    version: 1.1.pre4
+    source: 0
+- factory_girl: 
+    version: 1.2.4
+- gem_plugin: 
+    version: 0.2.3
+- hassle: 
+    version: 0.0.1
+- linecache: 
+    version: "0.43"
+- mongo: 
+    version: 0.19.1
+- mongo_ext: 
+    version: 0.19.1
+- will_paginate: 
+    version: 3.0.pre
+- mongoid: 
+    version: 2.0.0.beta1
+    source: 1
+- mongrel: 
+    version: 1.1.6
+- thor: 
+    version: 0.13.4
+- railties: 
+    version: 3.0.0.beta1
+    source: 2
+- rails: 
+    version: 3.0.0.beta1
+    source: 2
+- rspec-core: 
+    version: 2.0.0.beta.4
+- rspec-expectations: 
+    version: 2.0.0.beta.4
+- rspec-mocks: 
+    version: 2.0.0.beta.4
+- rspec: 
+    version: 2.0.0.beta.4
+- webrat: 
+    version: 0.7.0
+- rspec-rails: 
+    version: 2.0.0.beta.4
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
+- viewfu: 
+    version: 1.0.1
+hash: 7754c04a5807e1b8b42da7c18670ceb60560307b
+sources: 
+- Git: 
+    uri: git://github.com/plataformatec/devise.git
+    git: git://github.com/plataformatec/devise.git
+    ref: 597a930c74e92c2883e445198a3970e8856df9b6
+- Git: 
+    uri: git://github.com/railsjedi/mongoid.git
+    git: git://github.com/railsjedi/mongoid.git
+    ref: 3202f6a9ddfecf83a5ab21169cac5c743ac82191
+- Git: 
+    uri: git://github.com/rails/rails.git
+    git: git://github.com/rails/rails.git
+    ref: c10958fbddb22052e7cbe5fe6b825cda3cb26e48
+- Rubygems: 
+    uri: http://gemcutter.org
