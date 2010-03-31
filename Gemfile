@@ -9,12 +9,12 @@ gem "compass", ">= 0.10.0.rc1"
 gem "better_partials", ">= 1.0.1"
 gem "viewfu", ">= 1.0.1"
 
+gem "mongoid", :git => "git://github.com/durran/mongoid.git" #:path => "~/Gems/mongoid"
+gem "mongo_ext", ">= 0.19"
+
 group :development, :test do
   gem "ruby-debug"
   gem "mongrel"
-
-  gem "mongoid", :path => "~/Gems/mongoid"
-  gem "mongo_ext", ">= 0.19"
 end
 
 group :test do
@@ -29,7 +29,4 @@ end
 group :production do
   # required for getting sass to work with heroku
   gem "hassle"
-  
-  # gem "mongoid", :git => "git://github.com/durran/mongoid.git"
-  gem "mongo_ext", ">= 0.19"
 end
