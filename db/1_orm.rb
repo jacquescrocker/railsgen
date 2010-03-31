@@ -3,7 +3,7 @@
 # - ActiveRecord (default)
 # - Datamapper
 # - Sequel
-# - MongoMapper
+# - Mongoid
 
 puts "Creating Database Components"
 
@@ -44,7 +44,7 @@ step.components.create :title => "Sequel",
                        :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 
-# MongoMapper
+# Mongoid
 step.components.create :title => "Mongoid", 
                        :name => "mongoid",
                        :primary_group => true,
@@ -64,7 +64,7 @@ step.components.create :title => "Mongoid",
 step.components.create :addon_group => "attachments",
                        :title => "Carrier Wave", 
                        :name => "carrierwave",
-                       :depends_on_components => ["ar", "dm", "sequel", "mongomapper"],
+                       :depends_on_components => ["ar", "dm", "sequel", "mongoid"],
                        :info_url => "http://carrierwave.rubyforge.org",
                        :source_url => "http://github.com/jnicklas/carrierwave",
                        :code => code_path.join("attachments", "carrierwave.railsgen").read,

@@ -1,27 +1,25 @@
 class Stack
-  include MongoMapper::Document
+  include Mongoid::Document
+  include Mongoid::Timestamps
   
   # used for urls http://my-app.railsgen.com
   # or http://railsgen.com/my-app
-  key :name, String
+  field :name, :type => String
   # TODO: add url validator on name
   
-  key :title, String
+  field :title, :type => String
   
-  key :generated, Boolean, :default => false
-  key :number, Integer
+  field :generated, :type => Boolean, :default => false
+  field :number, :type => Integer
   
   # handles which stacks are added to the front page
-  key :landing_order, Integer
+  field :landing_order, :type => Integer
   
   # IDEA: Allow users to give the stack a title
-  # key :title, String
+  # field :title, String
   
-  many :stack_selections
+  embeds_many :stack_selections
 
-  # store when stuff was created, etc
-  timestamps!
-  
   # stacks can be found by name, number, or id
   def to_param
     name || number || id.to_s
@@ -58,7 +56,7 @@ class Stack
   # query helpers
   
   def self.landing_stacks
-    all(:landing_order => {:$gt => 1}, :order => [:landing_order.desc])
+    where(:landing_order => {:$gt => 1}).order_by([[:landing_order, :desc]])
   end
   
 end

@@ -1,27 +1,28 @@
 class Step
-  include MongoMapper::Document
+  include Mongoid::Document
   
   # displayed title of the step
-  key :title, String
+  field :title, :type => String
   
   # displayed on the top of the page
-  key :header, String
+  field :header, :type => String
   
   # name of the step (used for urls, etc)
-  key :name, String
+  field :name, :type => String
   
   # basic description for the step
-  key :description, String
+  field :description, :type => String
   
-  key :order, Integer, :required => true
+  field :order, :type => Integer
+  validates_presence_of :order
   
-  has_many :components
+  has_many_related :components
   
   def to_param
     name
   end
   
   def self.list
-    all(:order => [:order.asc])
+    order_by([[:order, :asc]])
   end
 end

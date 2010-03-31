@@ -1,7 +1,7 @@
 class StackSelection
-  include MongoMapper::EmbeddedDocument
+  include Mongoid::Document
   
-  belongs_to :component
+  embedded_in :component, :inverse_of => :selections
   
   def self.from_component(component)
     selection = new

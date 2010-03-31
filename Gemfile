@@ -1,8 +1,7 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 
-gem "bundler", "0.9.5"
-gem "rails", "3.0.0.beta"
+gem "rails", :git => "git://github.com/rails/rails.git"
 
 gem "haml"
 gem "compass", ">= 0.10.0.rc1"
@@ -10,14 +9,12 @@ gem "compass", ">= 0.10.0.rc1"
 gem "better_partials", ">= 1.0.1"
 gem "viewfu", ">= 1.0.1"
 
-gem "mongo", ">= 0.19"
-gem "mongo_ext", ">= 0.19"
-
-gem "mongo_mapper", ">= 0.7.1"
-
 group :development, :test do
   gem "ruby-debug"
   gem "mongrel"
+
+  gem "mongoid", :path => "~/Gems/mongoid"
+  gem "mongo_ext", ">= 0.19"
 end
 
 group :test do
@@ -32,4 +29,7 @@ end
 group :production do
   # required for getting sass to work with heroku
   gem "hassle"
+  
+  # gem "mongoid", :git => "git://github.com/durran/mongoid.git"
+  gem "mongo_ext", ">= 0.19"
 end

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   
   def current_stack
     @current_stack ||= begin
-      Stack.find(session[:stack_id])
+      Stack.where(:_id => session[:stack_id])
     end
   end
   

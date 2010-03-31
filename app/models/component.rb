@@ -1,53 +1,54 @@
 class Component
-  include MongoMapper::Document
+  include Mongoid::Document
   
   # displayed title of the component
-  key :title, String, :required => true
+  field :title, :type => String
+  validates_presence_of :title
 
   # name of the component (used for urls, etc)
-  key :name, :required => true
+  field :name, :type => String
+  validates_presence_of :name
   
-  key :version, String
+  field :version, :type => String
   
   # tagline
-  key :tagline, String
+  field :tagline, :type => String
   
   # expanded description of the component
-  key :description, String
+  field :description, :type => String
 
   # sample code
-  key :sample, String
-
+  field :sample, :type => String
   
   # where to get more info
-  key :info_url, String
-  key :source_url, String
+  field :info_url, :type => String
+  field :source_url, :type => String
 
-  key :comments_count, Integer, :default => 0
+  field :comments_count, :type => Integer, :default => 0
 
   # render code for the actual generator
-  key :code, String
+  field :code, :type => String
   
   # see if this is a default rails component
-  key :in_rails_stack, Boolean, :default => true
+  field :in_rails_stack, :type => Boolean, :default => true
   
   # define the dependencies (array of names) for the component
-  key :depends_on_components, Array
+  field :depends_on_components, :type => Array
 
   # define the includes list. sometimes a component is a superset of another, 
   # so if its defined, hide the other one that it already includes
-  key :includes_components, Array
+  field :includes_components, :type => Array
   
   # see if the component is in the primary
-  key :primary_group, Boolean, :default => false
+  field :primary_group, :type => Boolean, :default => false
   
   # see if the component is an addon to another component
-  key :addon_group, String, :default => nil
+  field :addon_group, :type => String, :default => nil
 
   # for large lists of components, just group them via this mini_group title
-  key :mini_group, String, :default => nil
+  field :mini_group, :type => String, :default => nil
   
-  belongs_to :step
+  belongs_to_related :step
 
   def to_param
     name

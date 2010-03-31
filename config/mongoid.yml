@@ -1,0 +1,24 @@
+defaults: &defaults
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+development:
+  <<: *defaults
+  database: railsgen
+
+test:
+  <<: *defaults
+  database: railsgen
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  host: <%= ENV['MONGOHQ_HOST'] %>
+  port: <%= ENV['MONGOHQ_PORT'] %>
+  username: <%= ENV['MONGOHQ_USERNAME'] %>
+  password: <%= ENV['MONGOHQ_PASSWORD'] %>
+  database: <%= ENV['MONGOHQ_DATABASE'] %>
