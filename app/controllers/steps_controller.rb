@@ -1,9 +1,9 @@
 class StepsController < ApplicationController
   def show
     # get the current step
-    @step = Step.first(:name => params[:id])
+    @step = Step.where(:name => params[:id]).first
 
     # get a list of the components
-    @components = @step.components.all(:primary_group => true)
+    @components = @step.components.where(:primary_group => true)
   end
 end
