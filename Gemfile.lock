@@ -208,16 +208,16 @@ specs:
     version: 0.10.3
 - viewfu: 
     version: 1.0.1
-hash: 1d03e0aa91e9666849e303625c5980a2df9838c6
+hash: cd40105565f01f06e01b52c3087d00c4200c161b
 sources: 
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
     ref: 7dc1842cc43df4b5c79b8dec8e9e605743a46d1d
 - Git: 
-    uri: git://github.com/railsjedi/mongoid.git
-    git: git://github.com/railsjedi/mongoid.git
-    ref: 80d1aa1c5c28ac4e825ad8728dd6b858d2b501a4
+    uri: git://github.com/durran/mongoid.git
+    git: git://github.com/durran/mongoid.git
+    ref: 0a40d864708ce9607bc9adf33fc99b3a154addab
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
