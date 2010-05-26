@@ -10,7 +10,7 @@ gem "better_partials", ">= 1.0.1"
 gem "viewfu", ">= 1.0.1"
 
 gem "mongoid", :git => "git://github.com/railsjedi/mongoid.git" #:path => "~/Gems/mongoid"
-gem "mongo_ext", ">= 0.19"
+gem "bson_ext", ">= 1.0"
 
 gem "devise", :git => "git://github.com/plataformatec/devise.git" #:path => "~/Gems/devise"
 

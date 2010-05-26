@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require "action_controller/railtie"
 require "action_mailer/railtie"
+require "mongoid/railtie"
 
 # Auto-require default libraries and those for the current Rails environment.
 Bundler.require :default, Rails.env
@@ -32,8 +33,8 @@ module RailsGenerate
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
-      # g.orm             :active_record
-      g.template_engine :erb
+      g.orm             :mongoid
+      g.template_engine :haml
       g.test_framework  :rspec
     end
 
