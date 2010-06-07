@@ -14,21 +14,22 @@ gem "bson_ext", ">= 1.0"
 
 gem "devise", :git => "git://github.com/plataformatec/devise.git" #:path => "~/Gems/devise"
 
-group :development, :test do
-  gem "ruby-debug"
-  gem "mongrel"
-end
+if ENV['IS_HEROKU']
+  group :production do
+    # required for getting sass to work with heroku
+    gem "hassle"
+  end
+else
+  group :development, :test do
+    gem "ruby-debug"
+    gem "mongrel"
+  end
 
-group :test do
-  gem "ruby-debug"
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem "factory_girl", :require => nil
-  gem "rspec-rails", ">= 2.0.0.beta"
-end
-
-group :production do
-  # required for getting sass to work with heroku
-  gem "hassle"
+  group :test do
+    gem "rspec-rails", ">= 2.0.0.beta"
+    gem 'capybara'
+    gem 'database_cleaner'
+    gem 'cucumber-rails'
+    gem "factory_girl", :require => nil
+  end
 end

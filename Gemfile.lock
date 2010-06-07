@@ -1,11 +1,8 @@
 --- 
 dependencies: 
-  hassle: 
-    group: 
-    - :production
-    version: ">= 0"
   ruby-debug: 
     group: 
+    - :development
     - :test
     version: ">= 0"
   bson_ext: 
@@ -37,14 +34,14 @@ dependencies:
     group: 
     - :test
     version: ">= 0"
-  better_partials: 
-    group: 
-    - :default
-    version: ">= 1.0.1"
   rspec-rails: 
     group: 
     - :test
     version: ">= 2.0.0.beta"
+  better_partials: 
+    group: 
+    - :default
+    version: ">= 1.0.1"
   factory_girl: 
     group: 
     - :test
@@ -72,17 +69,13 @@ specs:
     version: 0.8.7
 - abstract: 
     version: 1.0.0
-- builder: 
-    version: 2.1.2
-- i18n: 
-    version: 0.4.0.beta1
-- memcache-client: 
-    version: 1.8.3
-- tzinfo: 
-    version: 0.3.20
 - activesupport: 
     version: 3.0.0.beta3
     source: 2
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.4.1
 - activemodel: 
     version: 3.0.0.beta3
     source: 2
@@ -93,7 +86,9 @@ specs:
 - rack-mount: 
     version: 0.6.3
 - rack-test: 
-    version: 0.5.3
+    version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
 - actionpack: 
     version: 3.0.0.beta3
     source: 2
@@ -102,13 +97,9 @@ specs:
 - polyglot: 
     version: 0.3.1
 - treetop: 
-    version: 1.4.5
+    version: 1.4.8
 - mail: 
-    version: 2.2.1
-- text-hyphen: 
-    version: 1.0.0
-- text-format: 
-    version: 1.0.0
+    version: 2.2.2
 - actionmailer: 
     version: 3.0.0.beta3
     source: 2
@@ -123,7 +114,7 @@ specs:
 - better_partials: 
     version: 1.0.1
 - bson: 
-    version: 1.0.1
+    version: 1.0.2
 - bson_ext: 
     version: 1.0.1
 - bundler: 
@@ -137,15 +128,15 @@ specs:
 - json_pure: 
     version: 1.4.3
 - selenium-webdriver: 
-    version: 0.0.18
+    version: 0.0.20
 - capybara: 
     version: 0.3.8
 - columnize: 
     version: 0.3.1
 - haml: 
-    version: 3.0.6
+    version: 3.0.10
 - compass: 
-    version: 0.10.1
+    version: 0.10.2
 - diff-lcs: 
     version: 1.1.2
 - trollop: 
@@ -155,13 +146,13 @@ specs:
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
-    version: 0.7.3
+    version: 0.8.0
 - cucumber-rails: 
-    version: 0.3.1
+    version: 0.3.2
 - database_cleaner: 
     version: 0.5.2
 - warden: 
-    version: 0.10.5
+    version: 0.10.7
 - devise: 
     version: 1.1.rc1
     source: 0
@@ -169,12 +160,10 @@ specs:
     version: 1.2.4
 - gem_plugin: 
     version: 0.2.3
-- hassle: 
-    version: 0.0.1
 - linecache: 
     version: "0.43"
 - mongo: 
-    version: 1.0.1
+    version: 1.0.2
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
@@ -191,36 +180,36 @@ specs:
     version: 3.0.0.beta3
     source: 2
 - rspec-core: 
-    version: 2.0.0.beta.8
+    version: 2.0.0.beta.11
 - rspec-expectations: 
-    version: 2.0.0.beta.8
+    version: 2.0.0.beta.11
 - rspec-mocks: 
-    version: 2.0.0.beta.8
+    version: 2.0.0.beta.11
 - rspec: 
-    version: 2.0.0.beta.8
+    version: 2.0.0.beta.11
 - webrat: 
     version: 0.7.1
 - rspec-rails: 
-    version: 2.0.0.beta.8
+    version: 2.0.0.beta.11
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
     version: 0.10.3
 - viewfu: 
     version: 1.0.1
-hash: cd40105565f01f06e01b52c3087d00c4200c161b
+hash: 75640b802de66bcaf8fab7904a242aca61cf12b6
 sources: 
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
-    ref: 7dc1842cc43df4b5c79b8dec8e9e605743a46d1d
+    ref: f0c0f5f11b115df0dbe64a267ada4d92c9d028fa
 - Git: 
     uri: git://github.com/durran/mongoid.git
     git: git://github.com/durran/mongoid.git
-    ref: 0a40d864708ce9607bc9adf33fc99b3a154addab
+    ref: acd7665fd0aeba6f5e9fb067b24264a2a48224a5
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
-    ref: e3549a80549326049222c0916926a906d2638490
+    ref: 981f81275be8e0f38a35c397b41a209b0e14973c
 - Rubygems: 
     uri: http://gemcutter.org
