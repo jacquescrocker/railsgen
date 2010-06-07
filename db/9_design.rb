@@ -16,7 +16,6 @@ step.components.create :title => "Adminizio Lite",
                        :name => "adminizio",
                        :primary_group => true,
                        :info_url => "http://www.adminizio.com",
-                       :code => code_path.join("adminizio.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("adminizio.railsgen").read
 
 # MORE TO COME!

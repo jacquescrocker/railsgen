@@ -19,8 +19,7 @@ step.components.create :title => "jQuery",
                        :primary_group => true,
                        :info_url => "http://jquery.org",
                        :source_url => "http://github.com/jquery/jquery",
-                       :code => code_path.join("jquery.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("jquery.railsgen").read
 
 # Prototype
 step.components.create :title => "Prototype", 
@@ -29,8 +28,7 @@ step.components.create :title => "Prototype",
                        :primary_group => true,
                        :info_url => "http://www.prototypejs.org",
                        :source_url => "http://github.com/sstephenson/prototype",
-                       :code => code_path.join("prototype.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("prototype.railsgen").read
 
 # MooTools
 step.components.create :title => "MooTools", 
@@ -38,8 +36,7 @@ step.components.create :title => "MooTools",
                        :primary_group => true,
                        :info_url => "http://mootools.net",
                        :source_url => "http://github.com/mootools/mootools-core",
-                       :code => code_path.join("mootools.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("mootools.railsgen").read
 
 
 # JQUERY:
@@ -55,8 +52,7 @@ step.components.create :addon_group => "jquery",
                        :depends_on_components => ["jquery"],
                        :info_url => "http://jqueryui.com/",
                        :source_url => "http://jqueryui.com/docs/Subversion",
-                       :code => code_path.join("jquery", "jqueryui.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("jquery", "jqueryui.railsgen").read
 
 # JQuery Tools
 step.components.create :addon_group => "jquery",
@@ -65,8 +61,7 @@ step.components.create :addon_group => "jquery",
                        :depends_on_components => ["jquery"],
                        :info_url => "http://flowplayer.org/tools/",
                        :source_url => "http://github.com/merbjedi/jquery-tools",
-                       :code => code_path.join("jquery", "jquerytools.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("jquery", "jquerytools.railsgen").read
 
 # jQuery Form
 step.components.create :addon_group => "jquery",
@@ -75,8 +70,7 @@ step.components.create :addon_group => "jquery",
                        :depends_on_components => ["jquery"],
                        :info_url => "http://malsup.com/jquery/form/",
                        :source_url => "http://github.com/malsup/form",
-                       :code => code_path.join("jquery", "jqueryform.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("jquery", "jqueryform.railsgen").read
 
 # LiveQuery
 step.components.create :addon_group => "jquery",
@@ -85,5 +79,4 @@ step.components.create :addon_group => "jquery",
                        :depends_on_components => ["jquery"],
                        :info_url => "http://plugins.jquery.com/project/livequery/",
                        :source_url => "http://github.com/brandonaaron/livequery",
-                       :code => code_path.join("jquery", "livequery.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("jquery", "livequery.railsgen").read

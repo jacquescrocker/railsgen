@@ -21,9 +21,8 @@ step.components.create :title => "ERB",
                        :in_rails_stack => true,
                        :primary_group => true,
                        :info_url => "http://ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html",
-                       :code => code_path.join("erb.railsgen").read,
                        :tagline => "default rails .erb template format using Erubis",
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("erb.railsgen").read
 
 # Haml
 step.components.create :title => "Haml", 
@@ -32,8 +31,7 @@ step.components.create :title => "Haml",
                        :info_url => "http://haml-lang.com",
                        :source_url => "http://github.com/nex3/haml",
                        :tagline => "the world's greatest templating language -Hampton",
-                       :code => code_path.join("haml.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("haml.railsgen").read
 
 # Mustache
 step.components.create :title => "Mustache", 
@@ -41,8 +39,7 @@ step.components.create :title => "Mustache",
                        :primary_group => true,
                        :info_url => "http://defunkt.github.com/mustache",
                        :source_url => "http://github.com/defunkt/mustache",
-                       :code => code_path.join("mustache.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("mustache.railsgen").read
 
 # Liquid
 step.components.create :title => "Liquid", 
@@ -50,8 +47,7 @@ step.components.create :title => "Liquid",
                        :primary_group => true,
                        :info_url => "http://www.liquidmarkup.org",
                        :source_url => "http://github.com/tobi/liquid",
-                       :code => code_path.join("liquid.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("liquid.railsgen").read
 
 # Erector
 step.components.create :title => "Erector", 
@@ -59,9 +55,7 @@ step.components.create :title => "Erector",
                        :primary_group => true,
                        :info_url => "http://erector.rubyforge.org",
                        :source_url => "http://github.com/pivotal/erector",
-                       :code => code_path.join("erector.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
+                       :code => code_path.join("erector.railsgen").read
 
 # HAML Addons:
 # - compass
@@ -73,5 +67,4 @@ step.components.create :addon_group => "haml",
                        :depends_on_components => ["haml"],
                        :info_url => "http://compass-style.org",
                        :source_url => "http://github.com/chriseppstein/compass",
-                       :code => code_path.join("haml", "compass.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("haml", "compass.railsgen").read

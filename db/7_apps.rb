@@ -18,7 +18,6 @@ step.components.create :title => "Devise",
                        :primary_group => true,
                        :info_url => "http://blog.plataformatec.com.br/tag/devise/",
                        :source_url => "http://github.com/plataformatec/devise",
-                       :code => code_path.join("devise.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("devise.railsgen").read
 
 # MORE TO COME!

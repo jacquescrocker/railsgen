@@ -16,7 +16,6 @@ step.components.create :title => "Will Paginate",
                        :name => "willpaginate",
                        :primary_group => true,
                        :source_url => "http://github.com/mislav/will_paginate",
-                       :code => code_path.join("willpaginate.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("willpaginate.railsgen").read
 
 # MORE TO COME!

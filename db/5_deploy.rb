@@ -20,16 +20,14 @@ step.components.create :title => "Capistrano",
                        :primary_group => true,
                        :info_url => "http://www.capify.org",
                        :source_url => "http://github.com/capistrano/capistrano",
-                       :code => code_path.join("cap.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("cap.railsgen").read
 
 # Heroku
 step.components.create :title => "Heroku", 
                        :name => "heroku",
                        :primary_group => true,
                        :info_url => "http://heroku.com",
-                       :code => code_path.join("heroku.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("heroku.railsgen").read
 
 
 # Chef
@@ -38,14 +36,12 @@ step.components.create :title => "Chef",
                        :primary_group => true,
                        :info_url => "http://wiki.opscode.com/display/chef/Home",
                        :source_url => "http://github.com/opscode/chef",
-                       :code => code_path.join("chef.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("chef.railsgen").read
 
 # Engineyard Cloud
 step.components.create :title => "EngineYard Cloud", 
                        :name => "eycloud",
                        :primary_group => true,
                        :info_url => "http://engineyard.com",
-                       :code => code_path.join("eycloud.railsgen").read,
-                       :description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                       :code => code_path.join("eycloud.railsgen").read
 
