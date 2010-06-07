@@ -22,7 +22,6 @@ if ENV['IS_HEROKU']
 else
   group :development, :test do
     gem "ruby-debug"
-    gem "mongrel"
   end
 
   group :test do

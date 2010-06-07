@@ -1,30 +1,25 @@
 --- 
 dependencies: 
+  compass: 
+    group: 
+    - :default
+    version: ">= 0.10.0.rc1"
+  viewfu: 
+    group: 
+    - :default
+    version: ">= 1.0.1"
+  bson_ext: 
+    group: 
+    - :default
+    version: ">= 1.0"
   ruby-debug: 
     group: 
     - :development
     - :test
     version: ">= 0"
-  bson_ext: 
-    group: 
-    - :default
-    version: ">= 1.0"
-  viewfu: 
-    group: 
-    - :default
-    version: ">= 1.0.1"
-  compass: 
-    group: 
-    - :default
-    version: ">= 0.10.0.rc1"
   rails: 
     group: 
     - :default
-    version: ">= 0"
-  mongrel: 
-    group: 
-    - :development
-    - :test
     version: ">= 0"
   haml: 
     group: 
@@ -158,8 +153,6 @@ specs:
     source: 0
 - factory_girl: 
     version: 1.2.4
-- gem_plugin: 
-    version: 0.2.3
 - linecache: 
     version: "0.43"
 - mongo: 
@@ -169,8 +162,6 @@ specs:
 - mongoid: 
     version: 2.0.0.beta6
     source: 1
-- mongrel: 
-    version: 1.1.6
 - thor: 
     version: 0.13.6
 - railties: 
@@ -197,7 +188,7 @@ specs:
     version: 0.10.3
 - viewfu: 
     version: 1.0.1
-hash: 9743b9c8175baa038d0e6ed4722797d81b98f959
+hash: b4364f97cc05392a36fd6d3cb7d492c71d62396d
 sources: 
 - Git: 
     uri: git://github.com/plataformatec/devise.git
