@@ -17,7 +17,7 @@ gem "devise", :git => "git://github.com/plataformatec/devise.git" #:path => "~/G
 if ENV['IS_HEROKU']
   group :production do
     # required for getting sass to work with heroku
-    gem "hassle"
+    gem "hassle", :git => "git://github.com/railsjedi/hassle.git"
   end
 else
   group :development, :test do

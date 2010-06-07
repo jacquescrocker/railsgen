@@ -33,33 +33,6 @@ RailsGenerate::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'railsgen.com' }
 
-  # lets do some h4x0ring!
-  class Hassle::Compiler
-    def css_location(path)
-      expanded = File.expand_path(path)
-      public_dir = File.join(File.expand_path(Dir.pwd), "public")
-
-      File.expand_path(compile_location(expanded.gsub(public_dir, '')))
-    end
-
-    def normalize
-      template_location = options[:template_location]
-
-      if template_location.is_a?(Hash)
-        template_location.each_pair do |input, output|
-          template_location[input] = css_location(output)
-        end
-      elsif template_location.is_a?(Array)
-        options[:template_location] = template_location.to_a.map do |input, output|
-          [input, css_location(output)]
-        end
-      else
-        default_location = File.join(options[:css_location], "sass")
-        options[:template_location] = {default_location => css_location(default_location)}
-      end
-    end
-  end
-
   config.middleware.use Hassle
 
   # Enable serving of images, stylesheets, and javascripts from an asset server

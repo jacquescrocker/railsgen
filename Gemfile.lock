@@ -197,7 +197,7 @@ specs:
     version: 0.10.3
 - viewfu: 
     version: 1.0.1
-hash: 75640b802de66bcaf8fab7904a242aca61cf12b6
+hash: 9743b9c8175baa038d0e6ed4722797d81b98f959
 sources: 
 - Git: 
     uri: git://github.com/plataformatec/devise.git
