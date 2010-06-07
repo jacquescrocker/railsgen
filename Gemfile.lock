@@ -1,5 +1,10 @@
 --- 
 dependencies: 
+  ruby-debug: 
+    group: 
+    - :development
+    - :test
+    version: ">= 0"
   compass: 
     group: 
     - :default
@@ -12,10 +17,9 @@ dependencies:
     group: 
     - :default
     version: ">= 1.0"
-  ruby-debug: 
+  hassle: 
     group: 
-    - :development
-    - :test
+    - :production
     version: ">= 0"
   rails: 
     group: 
@@ -24,6 +28,11 @@ dependencies:
   haml: 
     group: 
     - :default
+    version: ">= 0"
+  unicorn: 
+    group: 
+    - :development
+    - :test
     version: ">= 0"
   database_cleaner: 
     group: 
@@ -66,14 +75,14 @@ specs:
     version: 1.0.0
 - activesupport: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - builder: 
     version: 2.1.2
 - i18n: 
     version: 0.4.1
 - activemodel: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -86,7 +95,7 @@ specs:
     version: 0.3.22
 - actionpack: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -97,15 +106,15 @@ specs:
     version: 2.2.2
 - actionmailer: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - arel: 
     version: 0.3.3
 - activerecord: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - activeresource: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - better_partials: 
     version: 1.0.1
 - bson: 
@@ -150,9 +159,12 @@ specs:
     version: 0.10.7
 - devise: 
     version: 1.1.rc1
-    source: 0
+    source: 1
 - factory_girl: 
     version: 1.2.4
+- hassle: 
+    version: 0.0.1
+    source: 0
 - linecache: 
     version: "0.43"
 - mongo: 
@@ -161,15 +173,15 @@ specs:
     version: 3.0.pre
 - mongoid: 
     version: 2.0.0.beta6
-    source: 1
+    source: 2
 - thor: 
     version: 0.13.6
 - railties: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - rails: 
     version: 3.0.0.beta3
-    source: 2
+    source: 3
 - rspec-core: 
     version: 2.0.0.beta.11
 - rspec-expectations: 
@@ -186,10 +198,16 @@ specs:
     version: 0.10.3
 - ruby-debug: 
     version: 0.10.3
+- unicorn: 
+    version: 0.99.0
 - viewfu: 
     version: 1.0.1
-hash: b4364f97cc05392a36fd6d3cb7d492c71d62396d
+hash: b14615bdd9fadddcdf37e4bb17c6715847dbd2c7
 sources: 
+- Git: 
+    uri: git://github.com/railsjedi/hassle.git
+    git: git://github.com/railsjedi/hassle.git
+    ref: 53fc4c2bfce6adb73946462adcc7c276d0283eef
 - Git: 
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
@@ -201,6 +219,6 @@ sources:
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
-    ref: 981f81275be8e0f38a35c397b41a209b0e14973c
+    ref: a210aff210616922063c89680219bb45581cc217
 - Rubygems: 
     uri: http://gemcutter.org
