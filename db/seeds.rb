@@ -1,17 +1,11 @@
 puts "Creating Steps"
 
-require "db/0_template"
-require "db/1_orm"
-require "db/2_js"
-require "db/3_test"
-require "db/4_server"
-require "db/5_deploy"
-require "db/6_rack"
-require "db/7_apps"
-require "db/8_ruby"
-require "db/9_design"
+# pull in all the step and components
+Dir[Rails.root.join("db", "*_*.rb")].each do |f|
+  require f
+end
 
-# grab everthing 
+# pull in all the stacks
 Dir[Rails.root.join("db", "stacks", "*.rb")].each do |f|
   require f
 end

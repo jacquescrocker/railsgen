@@ -202,7 +202,7 @@ specs:
     version: 0.99.0
 - viewfu: 
     version: 1.0.1
-hash: b14615bdd9fadddcdf37e4bb17c6715847dbd2c7
+hash: 43773b52748325da90948f8dbc97436d4cca3029
 sources: 
 - Git: 
     uri: git://github.com/railsjedi/hassle.git
@@ -212,10 +212,9 @@ sources:
     uri: git://github.com/plataformatec/devise.git
     git: git://github.com/plataformatec/devise.git
     ref: f0c0f5f11b115df0dbe64a267ada4d92c9d028fa
-- Git: 
-    uri: git://github.com/durran/mongoid.git
-    git: git://github.com/durran/mongoid.git
-    ref: acd7665fd0aeba6f5e9fb067b24264a2a48224a5
+- Path: 
+    path: !ruby/object:Pathname 
+      path: ~/Gems/mongoid
 - Git: 
     uri: git://github.com/rails/rails.git
     git: git://github.com/rails/rails.git
