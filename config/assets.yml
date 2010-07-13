@@ -1,0 +1,9 @@
+javascripts:
+  script:
+    - public/javascripts/jquery/jquery.js
+    - public/javascripts/jquery/iphoneStyle.js
+    - public/javascripts/default.js
+    
+stylesheets:
+  style:
+    - public/stylesheets/style.css

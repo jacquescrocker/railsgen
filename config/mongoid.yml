@@ -12,7 +12,11 @@ development:
 
 test:
   <<: *defaults
-  database: railsgen
+  database: railsgen_test
+
+staging:
+  <<: *defaults
+  database: railsgen_staging
 
 # set these environment variables on your prod server
 production:

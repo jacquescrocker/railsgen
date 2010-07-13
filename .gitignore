@@ -2,5 +2,6 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
-public/stylesheets
-public/javascripts/site.js
+public/stylesheets/*
+public/assets/*
+.rvmrc
