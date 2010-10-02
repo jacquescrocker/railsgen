@@ -33,8 +33,6 @@ RailsGenerate::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'railsgen.com' }
 
-  config.middleware.use Hassle
-
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
