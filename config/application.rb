@@ -19,9 +19,6 @@ module RailsGenerate
     # :all can be used as a placeholder for all plugins not explicitly named
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
-    # Activate observers that should always be running
-    # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
@@ -36,7 +33,8 @@ module RailsGenerate
     config.generators do |g|
       g.orm             :mongoid
       g.template_engine :haml
-      g.test_framework  :rspec
+      g.test_framework  :rspec, :fixtures => false
+      g.integration_tool :rspec
     end
 
     # Configure sensitive parameters which will be filtered from the log file.

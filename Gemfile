@@ -1,10 +1,12 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://rubygems.org'
 
+gem "i18n", ">= 0.4.0"
+
 gem "rails", ">= 3.0.0"
 
 gem "haml"
-gem "compass", ">= 0.10.0.rc1"
+gem "compass"
 
 gem "better_partials", ">= 1.0.1"
 gem "viewfu", ">= 1.0.1"
@@ -12,24 +14,41 @@ gem "viewfu", ">= 1.0.1"
 gem "mongoid", :git => "http://github.com/mongoid/mongoid.git"
 gem "bson_ext", ">= 1.0"
 
-gem "devise", :git => "http://github.com/plataformatec/devise.git" #:path => "~/Gems/devise"
+gem "devise", ">= 1.1.3"
+
+gem "rails_config", ">= 0.1.5"
 
 gem "jammit", :git => "http://github.com/documentcloud/jammit.git"
 
-group :production, :staging do
-  # required for getting sass to work with heroku
-  gem "hassle", :git => "http://github.com/railsjedi/hassle.git"
+gem "formtastic", ">= 1.1.0"
+
+# asset packaging
+gem "barista", :git => "http://github.com/Sutto/barista.git"
+
+group :development do
+  gem "barista_growl", :git => "http://github.com/TrevorBurnham/barista_growl.git"
 end
 
 group :development, :test do
-  gem "ruby-debug"
+  platforms :ruby_18 do
+    gem "ruby-debug"
+  end
   gem "mongrel"
 end
 
 group :test do
-  gem "rspec-rails", ">= 2.0.0.beta"
+  gem "autotest"
+  gem "growl-glue"
+
+  gem "rspec-rails", ">= 2.0.0.beta.22"
+  gem "remarkable_mongoid"
   gem 'capybara'
+  gem 'webrat'
   gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem "factory_girl", :require => nil
+  gem "factory_girl_rails"
+
+  gem "pickle", :git => "http://github.com/ianwhite/pickle.git"
+
+  gem "launchy"
 end
