@@ -5,3 +5,4 @@ tmp/**/*
 public/stylesheets/*
 public/assets/*
 .rvmrc
+config/settings/local.yml
