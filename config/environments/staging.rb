@@ -50,4 +50,7 @@ RailsGenerate::Application.configure do
 
   config.active_support.deprecation = :log
 
+  # dont update sass on production (we're using static assets)
+  Sass::Plugin.options.merge!(:never_update => true)
+
 end
