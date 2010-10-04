@@ -1,9 +1,13 @@
+s3_bucket: railsgen-assets-production
+s3_access_key_id: <%= ENV['ACCESS_KEY_ID'] %>
+s3_secret_access_key: <%= ENV['SECRET_ACCESS_KEY'] %>
+
 javascripts:
   script:
     - public/javascripts/jquery/jquery.js
     - public/javascripts/jquery/iphoneStyle.js
     - public/javascripts/default.js
-    
+
 stylesheets:
   style:
     - public/stylesheets/style.css

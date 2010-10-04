@@ -18,7 +18,13 @@ gem "devise", ">= 1.1.3"
 
 gem "rails_config", ">= 0.1.5"
 
-gem "jammit", :git => "http://github.com/documentcloud/jammit.git"
+# local
+# gem "jammit", :path => "~/Gems/jammit"
+# gem "jammit-s3", :path => "~/Gems/jammit-s3"
+
+# on git
+gem "jammit", :git => "http://github.com/railsjedi/jammit.git"
+gem "jammit-s3", :git => "http://github.com/railsjedi/jammit-s3.git"
 
 gem "formtastic", ">= 1.1.0"
 

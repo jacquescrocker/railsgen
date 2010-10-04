@@ -4,4 +4,18 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Rails::Application.load_tasks
+RailsGenerate::Application.load_tasks
+
+namespace :deploy do
+
+  desc "Deploy to Heroku"
+  task :production do
+    Jammit.package!
+    Jammit.upload_to_s3!
+
+    puts `git push heroku`
+  end
+
+end
+
+task :deploy => "deploy:production"

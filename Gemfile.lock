@@ -14,14 +14,6 @@ GIT
       growl
 
 GIT
-  remote: http://github.com/documentcloud/jammit.git
-  revision: cb85c4867966f9004c28b0edc9a969ebf9c2d3f7
-  specs:
-    jammit (0.5.3)
-      closure-compiler (>= 0.1.0)
-      yui-compressor (>= 0.9.1)
-
-GIT
   remote: http://github.com/ianwhite/pickle.git
   revision: 65ba8b7337f38d0ab4c153b3ab687e13de7086c7
   specs:
@@ -40,6 +32,23 @@ GIT
       mongo (= 1.0.9)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
+
+GIT
+  remote: http://github.com/railsjedi/jammit-s3.git
+  revision: 7259d6e223556b312ff81a1e55fce5058731201a
+  specs:
+    jammit-s3 (0.5.3.1)
+      jammit (>= 0.5.3)
+      mimemagic (>= 0.1.7)
+      s3 (>= 0.3.4)
+
+GIT
+  remote: http://github.com/railsjedi/jammit.git
+  revision: aa3c2b6847051b30b74d14e556af591a96f269d0
+  specs:
+    jammit (0.5.3)
+      closure-compiler (>= 0.1.0)
+      yui-compressor (>= 0.9.1)
 
 GEM
   remote: http://rubygems.org/
@@ -140,6 +149,7 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
+    mimemagic (0.1.7)
     mongo (1.0.9)
       bson (>= 1.0.5)
     mongrel (1.1.5)
@@ -150,6 +160,7 @@ GEM
     nokogiri (1.4.3.1)
     open4 (1.0.1)
     polyglot (0.3.1)
+    proxies (0.2.1)
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
@@ -196,6 +207,8 @@ GEM
     ruby-debug-base (0.10.3)
       linecache (>= 0.3)
     rubyzip (0.9.4)
+    s3 (0.3.4)
+      proxies
     selenium-webdriver (0.0.28)
       ffi (>= 0.6.1)
       json_pure
@@ -237,6 +250,7 @@ DEPENDENCIES
   haml
   i18n (>= 0.4.0)
   jammit!
+  jammit-s3!
   launchy
   mongoid!
   mongrel
