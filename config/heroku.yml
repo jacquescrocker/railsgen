@@ -20,6 +20,6 @@ domains:
 addons:
   production:
     - custom_domains:basic
+    - cron:hourly
     # list production env specific addons here
     # - ssl:piggyback
-    # - cron:hourly
