@@ -1,6 +1,4 @@
-s3_bucket: railsgen-assets-production
-s3_access_key_id: <%= ENV['ACCESS_KEY_ID'] %>
-s3_secret_access_key: <%= ENV['SECRET_ACCESS_KEY'] %>
+package_path: "assets-compiled"
 
 javascripts:
   script:
