@@ -22,14 +22,10 @@ Rspec.configure do |config|
   # config.mock_with :rr
   config.mock_with :rspec
 
-  config.before(:suite) do
-    DatabaseCleaner.orm = "mongoid"
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.clean_with(:truncation)
-  end
-
   config.before(:each) do
-    DatabaseCleaner.clean
+    Mongoid.master.collections.select do |collection|
+      collection.name !~ /system/
+    end.each(&:drop)
   end
 
 end

@@ -1,4 +1,5 @@
-require 'database_cleaner'
-DatabaseCleaner.strategy = :truncation
-DatabaseCleaner.orm = "mongoid"
-Before{ DatabaseCleaner.clean }
+Before do
+  Mongoid.master.collections.select do |collection|
+    collection.name !~ /system/
+  end.each(&:drop)
+end

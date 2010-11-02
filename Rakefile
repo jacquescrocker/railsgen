@@ -10,6 +10,7 @@ namespace :deploy do
 
   desc "Deploy to Heroku"
   task :production do
+    # TODO: compile SASS
     Jammit.package!
     Jammit.upload_to_s3!
 
