@@ -1,0 +1,25 @@
+apps:
+  production: railsgen
+
+stacks:
+  all: bamboo-mri-1.9.2
+
+config:
+  all:
+    BUNDLE_WITHOUT: "test development"
+
+collaborators:
+  all:
+    - "railsjedi@gmail.com"
+
+domains:
+  production:
+    - "railsgen.com"
+    - "www.railsgen.com"
+
+addons:
+  production:
+    - custom_domains:basic
+    # list production env specific addons here
+    # - ssl:piggyback
+    # - cron:hourly
