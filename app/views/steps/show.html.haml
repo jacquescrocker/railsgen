@@ -1,14 +1,14 @@
 #content.step_page
   .inner
-    = partial "steps/progress"
-    
+    = render "steps/progress"
+
     %h1 #{@step.header}:
-    
+
     %ul.app_item
       - @components.each do |component|
         %li.box
           .slider
-            %input.checkbox.slider{:type => "checkbox", 
+            %input.checkbox.slider{:type => "checkbox",
                                    :id => "component_#{component.name}",
                                    :name => "component[#{component.name}]" }
           %h2= component.title
@@ -17,15 +17,15 @@
               Comments (#{component.comments_count})
             - else
               Post a Comment
-          
+
           %p.tagline
             #{ component.tagline }
-          
+
           = clear
-          
+
           .sample.code
             = lorem
-          
+
           .rating
             %label Like it?
             %span.like
@@ -34,11 +34,11 @@
             %span.dislike
               %a{:href => "#"}
               %strong 10
-          
+
           .used
             %strong Used
             5 times
-          
+
           = clear
-    
+
     = clear

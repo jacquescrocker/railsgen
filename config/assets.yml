@@ -9,5 +9,5 @@ javascripts:
     - public/javascripts/default.js
 
 stylesheets:
-  style:
-    - public/stylesheets/style.css
+  styles:
+    - public/stylesheets/compiled/style.css

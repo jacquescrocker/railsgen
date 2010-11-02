@@ -1,29 +1,29 @@
 !!! Strict
 %html{html_attrs}
   %head
+    %title RailsGen - Ruby on Rails Application Generator
+
     :erb
-      <title>RailsGen - Ruby on Rails Application Generator</title>
+      <!-- Meta -->
       <meta name="description" content="generate a ruby on rails 3 application" />
       <meta name="keywords" content="ruby, rails, rails3, ruby on rails, reusable aps" />
-      
-      <!-- Meta -->
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
       <meta name="robots" content="noodp" />
-      
-    = include_stylesheets :style
+
+    = include_stylesheets :styles
     = include_javascripts :script
-      
+
   %body
     #body
       #container
         #content_container
-          = partial "shared/header"
+          = render "shared/header"
           = yield
-      
+
       .footer
         .train
         .perfectline
           %a{:href => "http://www.perfectline.co.uk", :title => "RailsGen is designed by PerfectLine"}
             = image_tag "perfectline.png", :alt => "PerfectLine"
-    
-    = partial "shared/analytics" if production?
+
+    = render "shared/analytics" if production?

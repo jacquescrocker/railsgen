@@ -6,7 +6,7 @@ project_path = Compass::AppIntegration::Rails.root
 http_path = "/"
 css_dir = "public/stylesheets/compiled"
 sass_dir = "public/sass"
-http_images_path = "#{Settings.compass_images_path}" if Settings.compass_images_path
+http_images_path = "#{Settings.images_path}" if Settings.images_path
 environment = Compass::AppIntegration::Rails.env
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
