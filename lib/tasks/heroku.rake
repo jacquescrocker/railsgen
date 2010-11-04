@@ -12,10 +12,10 @@ namespace :heroku do
 
   # runs before each push to a particular heroku deploy environment
   task :before_each_deploy do
-    puts "Uploading assets to #{@heroku_app[:app_name]}!"
+    puts "Uploading assets to #{@heroku_app[:env]}!"
 
     # grab the environment settings of the deploy environment (for s3 stuff)
-    Settings.add_source!("#{Rails.root}/config/settings/#{@heroku_app[:app_name]}.yml")
+    Settings.add_source!("#{Rails.root}/config/settings/#{@heroku_app[:env]}.yml")
     Settings.reload!
 
     # upload everything
