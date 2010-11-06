@@ -6,7 +6,7 @@ stacks:
 
 config:
   all:
-    BUNDLE_WITHOUT: "test development"
+    BUNDLE_WITHOUT: "test:development"
 
 collaborators:
   all:
