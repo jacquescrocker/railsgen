@@ -46,7 +46,6 @@ namespace :assets do
   desc "Uploads all the assets to S3"
   task :upload => :compile do
     # initialize the s3 access info from our Settings
-    require 'ruby-debug';debugger
     Jammit.upload_to_s3!({
       :bucket_name => Settings.s3.asset_bucket,
       :access_key_id => Settings.s3.access_key_id,
