@@ -1,0 +1,1 @@
+Jammit.configuration[:s3_bucket] = Settings.s3.asset_bucket
