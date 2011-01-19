@@ -4,5 +4,6 @@ log/*.log
 tmp/**/*
 public/stylesheets/*
 public/assets/*
+public/assets-compiled/*
 .rvmrc
 config/settings/local.yml
