@@ -34,7 +34,7 @@ end
 group :development, :test do
   gem "ruby-debug", :platforms => :mri_18
   gem "ruby-debug19", :platforms => :mri_19
-  gem "mongrel", ">= 1.2.0.pre2"
+  gem "thin"
 
   gem "growl-glue"
   gem "launchy"
